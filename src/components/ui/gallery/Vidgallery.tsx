@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Serviceimage from "../../../assets/mographtext.png";
 import SmartphoneFrame from "../../../assets/squareframe.gif";
 import Thumbnail1 from "../../../assets/thumbnail1.png";
@@ -43,11 +43,6 @@ export function Vidgallery() {
   ];
 
   const [activeVideo, setActiveVideo] = useState(data[0].videoid);
-  const [isMuted, setIsMuted] = useState(true);
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
 
   return (
     <div className="py-20 md:">
