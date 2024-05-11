@@ -1,4 +1,3 @@
-import { ThreeDCardDemo } from "./components/ui/3dcardComponent";
 import Home from "./components/ui/home/Home";
 import { Services } from "./components/ui/services/Services";
 import Sidebar from "./components/ui/sidebar/Sidebar";
