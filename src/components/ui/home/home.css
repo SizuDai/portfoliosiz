@@ -1,0 +1,115 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures the section takes up at least the full viewport height */
+}
+
+.intro {
+  text-align: center;
+  max-width: 540px; /* Adjusts the maximum width of the intro content */
+}
+
+.home__img {
+  text-align: center;
+  width: 190px;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+.home__name {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin: auto;
+  width: 540px;
+  margin-bottom: 0.5rem;
+}
+
+.home__education {
+  font-size: 1.5rem;
+  font-weight: var(--font-medium);
+  margin-bottom: 1.5rem;
+}
+
+.home_socials {
+  margin: 1.5rem 0;
+}
+
+.home_social-link {
+  color: var(--title-color);
+  margin: 1rem;
+  font-size: 2.3rem;
+  transition: 0.3s;
+}
+
+.home_social-link:hover {
+  color: #fffac5;
+}
+
+.scroll_down {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+}
+
+.home_scroll-name {
+  color: #454360;
+  font-size: var(--small-font-size);
+}
+.mouse {
+  border: 2px solid #454360;
+  display: block;
+  height: 1.6rem;
+  width: 1.25rem;
+  margin: auto;
+  margin-top: 0.75rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.blur-circle {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Ensure it's centered */
+  width: 400px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it circular */
+  background-color: rgb(0, 0, 0); /* Semi-transparent white */
+  filter: blur(100px); /* Apply blur effect */
+  z-index: -1; /* Ensure it's behind other content */
+}
+.hero-highlight {
+  opacity: 0.8; /* Adjust opacity as needed */
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* Adjust background color and opacity */
+}
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+
+.wheel {
+  background-color: var(--title-color);
+  border-radius: 100%;
+  width: 0.25rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ani-mouse 2s linear infinite;
+}

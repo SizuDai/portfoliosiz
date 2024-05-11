@@ -1,0 +1,101 @@
+/* Base Styles for Sidebar */
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--body-color);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 110px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Sidebar Navigation List */
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* Sidebar Links */
+.nav__link {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  font-weight: var(--font);
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: hsl(43, 100%, 68%);
+}
+
+/* Copyright Text */
+.copyright {
+  font-size: var(--small-font-size);
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  aside {
+    width: 70px;
+    padding: 1rem;
+  }
+
+  .nav__link {
+    font-size: 1.2rem;
+  }
+
+  .copyright {
+    font-size: var(--smaller-font-size);
+  }
+}
+
+/* Media Query for Extra Small Devices */
+@media screen and (max-width: 480px) {
+  aside {
+    width: 60px;
+    padding: 0.5rem;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: var(--smallest-font-size);
+  }
+}
+
+/* Toggle Button for Sidebar */
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: var(--title-color);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 11;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  aside {
+    left: -110px;
+  }
+
+  aside.active {
+    left: 0;
+  }
+}
