@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Serviceimage from "../../../assets/mographtext.png";
 import SmartphoneFrame from "../../../assets/squareframe.gif";
 import Thumbnail1 from "../../../assets/thumbnail1.png";
@@ -12,12 +13,12 @@ import Thumbnail7 from "../../../assets/thumbnail7.png";
 export function Vidgallery() {
   const data = [
     {
-      videoid: "YwtkP-V4RVo",
-      thumbnail: Thumbnail7,
-    },
-    {
       videoid: "ou1iMCUxFms",
       thumbnail: Thumbnail1,
+    },
+    {
+      videoid: "YwtkP-V4RVo",
+      thumbnail: Thumbnail7,
     },
     {
       videoid: "mYU9uEbjj8k",
@@ -45,46 +46,64 @@ export function Vidgallery() {
   const [activeVideo, setActiveVideo] = useState(data[0].videoid);
 
   return (
-    <div className="py-20 md:">
-      <img
+    <div className="py-20">
+      <motion.img
         src={Serviceimage}
         alt="after effects"
         className="mb-10 w-[250px]"
         id="motiongraphics"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       />
-      <p className="text-left text-yellow-100">
+      <motion.p
+        className="text-left text-yellow-100"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
         I work with animation, audio, and visual effects to create moving
         content and graphics for various media, such as television, the
         internet, and film. <br /> Motion graphic designers work with creative
         teams to incorporate design elements into a project.
-      </p>
+      </motion.p>
       <div className="py-10 flex flex-col items-center lg:flex-row justify-center lg:space-x-20 mt-10">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4 lg:mb-0">
           {data.map(({ videoid, thumbnail }, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => setActiveVideo(videoid)}
               className="rounded hover:bg-yellow shadow-glow"
               title={`Thumbnail for video ${videoid}`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               <img
                 src={thumbnail}
                 alt={`Thumbnail ${index + 1}`}
                 className="w-[150px] h-[150px] object-cover rounded-lg"
               />
-            </button>
+            </motion.button>
           ))}
         </div>
-        <div
+        <motion.div
           className="relative w-full max-w-[525px] mx-auto lg:mx-0"
           style={{ height: "525px" }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <img
             src={SmartphoneFrame}
             alt="Square Frame"
             className="absolute top-0 left-0 w-full h-full"
           />
-          <div className="absolute top-[15%] left-[15%] w-[70%] h-[70%]">
+          <motion.div
+            className="absolute top-[15%] left-[15%] w-[70%] h-[70%]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
             <iframe
               src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&mute=1&loop=1&playlist=${activeVideo}`}
               className="rounded-xl"
@@ -97,8 +116,8 @@ export function Vidgallery() {
                 height: "100%",
               }}
             ></iframe>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

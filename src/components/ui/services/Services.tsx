@@ -4,9 +4,21 @@ import Image2 from "../../../assets/mographassets.png";
 import Image3 from "../../../assets/graphicsassets.png";
 import Image4 from "../../../assets/characteranimation.png";
 import Image5 from "../../../assets/logodesignassets.png";
+import { easeInOut, motion } from "framer-motion";
 export function Services() {
   return (
-    <div className=" py-20 " id="services">
+    <motion.div
+      className=" py-20 "
+      id="services"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       <img
         src={Serviceimage}
         alt="after effects"
@@ -27,7 +39,15 @@ export function Services() {
         edits.
       </p>
       <section className="bg-transparent align-middle py-10 px-10">
-        <div className="py-2 mx-auto max-w-screen-xl sm:py-4">
+        <motion.div
+          className="py-2 mx-auto max-w-screen-xl sm:py-4"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, scale: 0 },
+            visible: { opacity: 1, scale: 1 },
+          }}
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
             <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-transparenth-auto md:h-full flex flex-col">
               <a
@@ -106,8 +126,8 @@ export function Services() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
-    </div>
+    </motion.div>
   );
 }

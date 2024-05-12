@@ -13,6 +13,7 @@ import HoverImage5 from "../../../assets/book5.gif";
 import Skill from "../../../assets/textskill.png";
 import { CardBody, CardContainer, CardItem } from "../3d-card";
 import AboutBox from "./AboutBox";
+import { motion } from "framer-motion";
 
 const Skills: React.FC = () => {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
@@ -26,11 +27,22 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <div className="py-20 drop-shadow-xl" id="about">
+    <motion.div
+      className="py-20 drop-shadow-xl"
+      id="about"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       <img
         src={Skill}
         alt="after effects"
-        className=" mb-10 w-[150px] md:m-auto"
+        className=" mb-4 w-[150px] content-start"
       />
       <section>
         <div className="scrollable-container">
@@ -149,7 +161,7 @@ const Skills: React.FC = () => {
         <AboutBox projectsCompleted={1197} clients={213} />
         <div className="vortex-container"></div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

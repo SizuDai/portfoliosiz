@@ -49,7 +49,7 @@ const ContactUs = () => {
             <img
               src={ContactUsPageGraphic}
               alt="Services Text"
-              className="mb-10 w-64 md:w-48 lg:w-64"
+              className="mb-5 w-64 md:w-48 lg:w-64"
               id="services"
             />
           </div>
@@ -127,7 +127,6 @@ const ContactUs = () => {
                 </p>
               )}
               <div className=" px-5 relative  align-middle inline-flex group">
-                <div className="absolute transition-all duration-1000 opacity-50 -inset-px bg-yellow-300 rounded-xl blur-lg group-hover:opacity-50 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
                 <button
                   type="submit"
                   className="relative inline-flex items-center justify-center px-8 py-4 text-2xl font-bold text-yellow-100 transition-all duration-200 bg-slate-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-900"

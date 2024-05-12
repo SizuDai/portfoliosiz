@@ -38,7 +38,7 @@ const Sidebar: React.FC = () => {
                 </a>
               </li>
               <li className="nav__item">
-                <a href="#motiongraphics" className="nav__link">
+                <a href="#animations" className="nav__link">
                   <i className="icon-layers"></i>
                 </a>
               </li>

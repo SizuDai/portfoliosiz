@@ -6,7 +6,7 @@ import Thumbnail2 from "../../../assets/thumbnaillg2.png";
 import Thumbnail3 from "../../../assets/thumbnaillg3.png";
 import Thumbnail4 from "../../../assets/thumbnaillg4.png";
 import Thumbnail5 from "../../../assets/thumbnaillg5.png";
-
+import { motion } from "framer-motion";
 export function Gallery() {
   const data = [
     { videoid: "hTwOilfdebY", thumbnail: Thumbnail4 },
@@ -19,11 +19,11 @@ export function Gallery() {
   const [activeVideo, setActiveVideo] = useState(data[0].videoid);
 
   return (
-    <div className=" py-20">
+    <div className="mt-5">
       <img
         src={Seperateimage}
         alt="Separation"
-        className=" flex m-auto h-60"
+        className=" flex m-auto h-60 mb-8"
         id="animations"
       />
       <img
@@ -43,7 +43,15 @@ export function Gallery() {
         campaign. These are my works for the brands i have work with.
       </p>
       <div className="flex flex-col items-center w-full mt-10">
-        <div className="w-full max-w-5xl">
+        <motion.div
+          className="w-full max-w-5xl"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, scale: 0 },
+            visible: { opacity: 1, scale: 1 },
+          }}
+        >
           <iframe
             src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&mute=1&loop=1&playlist=${activeVideo}`}
             className="w-full h-64 md:h-80 lg:h-96 rounded-lg object-cover"
@@ -52,7 +60,7 @@ export function Gallery() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
+        </motion.div>
         <div className="flex flex-wrap justify-center mt-4">
           {data.map(({ videoid, thumbnail }, index) => (
             <button

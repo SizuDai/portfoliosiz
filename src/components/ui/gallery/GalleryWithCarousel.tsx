@@ -1,5 +1,5 @@
 import Serviceimage from "../../../assets/vfxtext.png";
-
+import { motion } from "framer-motion";
 export function GalleryWithCarousel() {
   const videos = [
     { videoid: "gaW7K9QB7-s", title: "Video 1" },
@@ -17,13 +17,22 @@ export function GalleryWithCarousel() {
         id="vfx"
       />
       <p className="text-left text-yellow-100">
-        There are several benefits to using VFX in advertising: 1. Creativity:
-        VFX allows advertisers to push the boundaries of what's possible,
-        <br />
-        creating visually stunning and memorable ads that capture the viewer's
-        attention.
+        There are several benefits to using VFX in advertising: <br />{" "}
+        Creativity: VFX allows advertisers to push the boundaries of what's
+        possible, creating visually stunning and memorable ads that capture the
+        viewer's attention.
       </p>
-      <div className="container py-0 mx-auto mt-10 ">
+      <motion.div
+        className="container py-0 m-auto mt-10 "
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
         <div className="flex  m-5 gap-5">
           {videos.map(({ videoid, title }, index) => (
             <div key={index} className="lg:w-1/4 sm:w-2/4 ">
@@ -46,7 +55,7 @@ export function GalleryWithCarousel() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
