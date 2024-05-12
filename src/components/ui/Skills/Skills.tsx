@@ -27,7 +27,11 @@ const Skills: React.FC = () => {
 
   return (
     <div className="py-20 drop-shadow-xl" id="about">
-      <img src={Skill} alt="after effects" className=" mb-10 w-[150px]" />
+      <img
+        src={Skill}
+        alt="after effects"
+        className=" mb-10 w-[150px] md:m-auto"
+      />
       <section>
         <div className="scrollable-container">
           <div className="image-container flex content-center scale-200 m-auto p-auto">

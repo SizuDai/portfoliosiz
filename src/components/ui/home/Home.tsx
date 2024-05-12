@@ -25,8 +25,8 @@ const Home: React.FC = () => {
           <img src={text} alt="" className="home__name" />
           <span className="home__education">
             I'm a Motion Graphics Designer
-            <br className=" text-yellow-500" /> "I can do anything but it
-            depends upon you"
+            <br className=" text-yellow-500" /> "I can do anything (I think so
+            ...)"
           </span>
           <HeaderSocials />
           <div className="relative inline-flex  group">
