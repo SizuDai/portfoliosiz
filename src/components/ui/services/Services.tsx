@@ -4,7 +4,7 @@ import Image2 from "../../../assets/mographassets.png";
 import Image3 from "../../../assets/graphicsassets.png";
 import Image4 from "../../../assets/characteranimation.png";
 import Image5 from "../../../assets/logodesignassets.png";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 export function Services() {
   return (
     <motion.div
