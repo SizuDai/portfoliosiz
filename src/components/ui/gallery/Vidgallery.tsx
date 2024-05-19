@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Serviceimage from "../../../assets/mographtext.png";
-import SmartphoneFrame from "../../../assets/squareframe.gif";
+import SmartphoneFrame from "../../../assets/squareframe.png";
 import Thumbnail1 from "../../../assets/thumbnail1.png";
 import Thumbnail2 from "../../../assets/thumbnail2.png";
 import Thumbnail3 from "../../../assets/thumbnail3.png";
