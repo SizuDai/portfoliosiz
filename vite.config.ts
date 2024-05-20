@@ -1,15 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      '@components': '/src/components',
-      '@assets': '/src/assets',
-      // Add other aliases as needed
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
   plugins: [react()],
-  base: '/portfoliosiz/',
-})
+  base: '/portfoliosiz/', // Adjust this based on your deployment path
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+      },
+    },
+  },
+});
