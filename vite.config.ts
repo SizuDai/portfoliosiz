@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/portfoliosiz/', // Adjust this based on your deployment path
+  base: '/portfoliosiz/', // Ensure this matches your deployment path
   build: {
     rollupOptions: {
       output: {
