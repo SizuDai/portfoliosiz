@@ -10,14 +10,6 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/portfoliosiz/', // Ensure this matches your deployment path
   build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-      },
-    },
   },
 });
