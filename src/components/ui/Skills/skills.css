@@ -33,7 +33,7 @@
 
 .image-container img {
   display: inline-block;
-  width: 100%; /* Responsive width */
+  max-width: 100%; /* Responsive width */
   height: auto;
   transition: transform 0.6s ease-in-out;
 }

@@ -157,7 +157,7 @@ const ContactUs = () => {
           >
             <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
-                className=" ml-20 w-[300px]"
+                className=" m-auto w-[300px]"
                 alt="Contact Us Page Graphic"
                 src={Scroll}
               />

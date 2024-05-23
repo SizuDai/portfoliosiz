@@ -35,7 +35,7 @@ export function GalleryWithCarousel() {
       >
         <div className="flex  m-5 gap-5">
           {videos.map(({ videoid, title }, index) => (
-            <div key={index} className="lg:w-1/4 sm:w-2/4 ">
+            <div key={index} className="lg:w-1/4 md:w-2/4 ">
               <div
                 className="relative overflow-hidden rounded shadow-glow"
                 style={{
@@ -59,5 +59,3 @@ export function GalleryWithCarousel() {
     </section>
   );
 }
-
-// Add the CSS for the glow effec
