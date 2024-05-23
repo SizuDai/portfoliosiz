@@ -10,7 +10,7 @@ import HoverImage2 from "../../../assets/book2.gif";
 import HoverImage3 from "../../../assets/book3.gif";
 import HoverImage4 from "../../../assets/book4.gif";
 import HoverImage5 from "../../../assets/book5.gif";
-import Skill from "../../../assets/textskill.png";
+import Skill from "../../../assets/SKILLS.png";
 import { CardBody, CardContainer, CardItem } from "../3d-card";
 import AboutBox from "./AboutBox";
 import { motion } from "framer-motion";

@@ -4,8 +4,8 @@ import "./home.css";
 import Me from "../../../assets/avatar-1 1.png";
 import textsub from "../../../assets/textintro.png";
 import text from "../../../assets/textintro2.png";
-import text2 from "../../../assets/Workwithmetext.png";
-import text3 from "../../../assets/workwithme2.png";
+import text2 from "../../../assets/WORK WITH ME.png";
+import text3 from "../../../assets/WORK WITH ME 2.png";
 import HeaderSocials from "./HeaderSocials";
 import { HeroHighlight } from "../AsUi/hero-highlight";
 

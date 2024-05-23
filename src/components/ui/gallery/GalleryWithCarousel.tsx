@@ -1,4 +1,4 @@
-import Serviceimage from "../../../assets/vfxtext.png";
+import Serviceimage from "../../../assets/VFX.png";
 import { motion } from "framer-motion";
 export function GalleryWithCarousel() {
   const videos = [

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import ContactUsPageGraphic from "../../../assets/contacttext.png";
+import ContactUsPageGraphic from "../../../assets/CONTACT US.png";
 import Scroll from "../../../assets/basic_scroll_by_trulymalicious_dgccekt.gif";
 import { useState } from "react";
-import text2 from "../../../assets/Workwithmetext.png";
-import text3 from "../../../assets/workwithme2.png";
+import text2 from "../../../assets/WORK WITH ME.png";
+import text3 from "../../../assets/WORK WITH ME 2.png";
 
 const ContactUs = () => {
   const InputStyle = ` mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200`;

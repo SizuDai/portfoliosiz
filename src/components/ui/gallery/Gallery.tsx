@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Serviceimage from "../../../assets/animationtext.png";
+import Serviceimage from "../../../assets/ANIMATIONS.png";
 import Seperateimage from "../../../assets/seperation.png";
 import Thumbnail1 from "../../../assets/thumbnaillg1.png";
 import Thumbnail2 from "../../../assets/thumbnaillg2.png";
