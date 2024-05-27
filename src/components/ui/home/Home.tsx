@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
 import Me from "../../../assets/avatar-1 1.png";
-import textsub from "../../../assets/textintro.png";
-import text from "../../../assets/textintro2.png";
+import textsub from "../../../assets/SIZAN SHORT.png";
+import text from "../../../assets/SIZAN LONG.png";
 import text2 from "../../../assets/WORK WITH ME.png";
 import text3 from "../../../assets/WORK WITH ME 2.png";
 import HeaderSocials from "./HeaderSocials";
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           <motion.img
             src={isMobile ? textsub : text}
             alt=""
-            className="home__name sm: px-10"
+            className="home__name w-[350px] sm:w-auto px-10 "
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 1 }}
