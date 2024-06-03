@@ -48,7 +48,10 @@ const Skills: React.FC = () => {
         <div className="flex flex-wrap justify-center">
           <CardContainer className="p-2 w-[250px]">
             <CardBody className="card-body">
-              <CardItem translateZ="50" className="card-item">
+              <CardItem
+                translateZ="50"
+                className="card-item  hover:text-purple-500"
+              >
                 After Effects
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
@@ -65,7 +68,10 @@ const Skills: React.FC = () => {
 
           <CardContainer className="p-2 w-[250px]">
             <CardBody className="card-body">
-              <CardItem translateZ="50" className="card-item">
+              <CardItem
+                translateZ="50"
+                className="card-item hover:text-blue-500"
+              >
                 Photoshop
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
@@ -82,7 +88,10 @@ const Skills: React.FC = () => {
 
           <CardContainer className="p-2 w-[250px]">
             <CardBody className="card-body">
-              <CardItem translateZ="50" className="card-item">
+              <CardItem
+                translateZ="50"
+                className="card-item  hover:text-orange-500"
+              >
                 Illustrator
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
@@ -99,7 +108,10 @@ const Skills: React.FC = () => {
 
           <CardContainer className="p-2 w-[250px]">
             <CardBody className="card-body">
-              <CardItem translateZ="50" className="card-item">
+              <CardItem
+                translateZ="50"
+                className="card-item  hover:text-red-500"
+              >
                 Figma
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
@@ -116,7 +128,10 @@ const Skills: React.FC = () => {
 
           <CardContainer className="p-2 w-[250px]">
             <CardBody className="card-body">
-              <CardItem translateZ="50" className="card-item">
+              <CardItem
+                translateZ="50"
+                className="card-item  hover:text-green-500"
+              >
                 Davinci
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
