@@ -57,6 +57,7 @@ const Skills: React.FC = () => {
                   <img
                     src={hoveredImage === HoverImage1 ? HoverImage1 : Image1}
                     className="card-image"
+                    alt="thumbnail"
                     onMouseEnter={() => handleMouseEnter(HoverImage1)}
                     onMouseLeave={handleMouseLeave}
                   />
@@ -76,6 +77,7 @@ const Skills: React.FC = () => {
                   <img
                     src={hoveredImage === HoverImage2 ? HoverImage2 : Image2}
                     className="card-image"
+                    alt="thumbnail"
                     onMouseEnter={() => handleMouseEnter(HoverImage2)}
                     onMouseLeave={handleMouseLeave}
                   />
@@ -95,6 +97,7 @@ const Skills: React.FC = () => {
                   <img
                     src={hoveredImage === HoverImage5 ? HoverImage5 : Image5}
                     className="card-image"
+                    alt="thumbnail"
                     onMouseEnter={() => handleMouseEnter(HoverImage5)}
                     onMouseLeave={handleMouseLeave}
                   />
@@ -114,6 +117,7 @@ const Skills: React.FC = () => {
                   <img
                     src={hoveredImage === HoverImage3 ? HoverImage3 : Image3}
                     className="card-image"
+                    alt="thumbnail"
                     onMouseEnter={() => handleMouseEnter(HoverImage3)}
                     onMouseLeave={handleMouseLeave}
                   />
@@ -133,6 +137,7 @@ const Skills: React.FC = () => {
                   <img
                     src={hoveredImage === HoverImage4 ? HoverImage4 : Image4}
                     className="card-image"
+                    alt="thumbnail"
                     onMouseEnter={() => handleMouseEnter(HoverImage4)}
                     onMouseLeave={handleMouseLeave}
                   />
