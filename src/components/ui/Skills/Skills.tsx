@@ -44,13 +44,13 @@ const Skills: React.FC = () => {
       </div>
       <section>
         <div className="flex flex-wrap justify-center">
-          <CardContainer className="p-10 w-[300px]">
+          <CardContainer className="p-10 w-[250px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
                 className="card-item  hover:text-purple-500 font-retro text-sm"
               >
-                After Effects
+                AfterEffects
                 <CardItem translateZ="100" className="w-full h-full mt-4">
                   <img
                     src={hoveredImage === HoverImage1 ? HoverImage1 : Image1}
@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-10 w-[300px]">
+          <CardContainer className="p-10 w-[250px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
@@ -84,7 +84,7 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-10 w-[300px]">
+          <CardContainer className="p-10 w-[250px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
@@ -104,7 +104,7 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-10 w-[300px]">
+          <CardContainer className="p-10 w-[250px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
@@ -124,7 +124,7 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-10 w-[300px]">
+          <CardContainer className="p-10 w-[250px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
