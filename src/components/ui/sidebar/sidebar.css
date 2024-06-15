@@ -19,20 +19,19 @@ aside {
 .nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 
-/* Sidebar Links */
-.nav__link {
-  font-size: 1.5rem;
-  color: var(--title-color);
-  font-weight: var(--font);
-  transition: color 0.3s ease;
+.nav__link svg {
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.nav__link:hover {
-  color: hsl(43, 100%, 68%);
+.nav__link:hover svg {
+  transform: scale(1.1);
+  fill: #ff9000; /* Change the color as desired */
 }
+
+/* Sidebar Links *
 
 /* Copyright Text */
 .copyright {

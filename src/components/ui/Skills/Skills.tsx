@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import "./skills.css";
-import Image1 from "../../../assets/book1.png";
-import Image2 from "../../../assets/book2.png";
-import Image3 from "../../../assets/book3.png";
-import Image4 from "../../../assets/book4.png";
-import Image5 from "../../../assets/book5.png";
-import HoverImage1 from "../../../assets/book1.gif";
-import HoverImage2 from "../../../assets/book2.gif";
-import HoverImage3 from "../../../assets/book3.gif";
-import HoverImage4 from "../../../assets/book4.gif";
-import HoverImage5 from "../../../assets/book5.gif";
-import Skill from "../../../assets/SKILLS.png";
+import Image1 from "../../../assets/Adobe05.png";
+import Image2 from "../../../assets/Adobe04.png";
+import Image3 from "../../../assets/Adobe02.png";
+import Image4 from "../../../assets/Adobe01.png";
+import Image5 from "../../../assets/Adobe03.png";
+import HoverImage1 from "../../../assets/Adobe05.png";
+import HoverImage2 from "../../../assets/Adobe04.png";
+import HoverImage3 from "../../../assets/Adobe02.png";
+import HoverImage4 from "../../../assets/Adobe01.png";
+import HoverImage5 from "../../../assets/Adobe03.png";
 import { CardBody, CardContainer, CardItem } from "../3d-card";
 import AboutBox from "./AboutBox";
 import { motion } from "framer-motion";
+import GamingText from "../../text/GamingText";
 
 const Skills: React.FC = () => {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
 
   return (
     <motion.div
-      className="py-20 drop-shadow-xl"
+      className="mt-5 drop-shadow-xl"
       id="about"
       initial="hidden"
       whileInView="visible"
@@ -39,18 +39,16 @@ const Skills: React.FC = () => {
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <img
-        src={Skill}
-        alt="after effects"
-        className="mb-4 w-[150px] content-start"
-      />
+      <div className="mx-5">
+        <GamingText text="Skills" size="text-3xl" />
+      </div>
       <section>
         <div className="flex flex-wrap justify-center">
-          <CardContainer className="p-2 w-[250px]">
+          <CardContainer className="p-10 w-[300px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
-                className="card-item  hover:text-purple-500"
+                className="card-item  hover:text-purple-500 font-retro text-sm"
               >
                 After Effects
                 <CardItem translateZ="100" className="w-full h-full mt-4">
@@ -66,11 +64,11 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-2 w-[250px]">
+          <CardContainer className="p-10 w-[300px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
-                className="card-item hover:text-blue-500"
+                className="card-item hover:text-blue-500 font-retro text-sm"
               >
                 Photoshop
                 <CardItem translateZ="100" className="w-full h-full mt-4">
@@ -86,11 +84,11 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-2 w-[250px]">
+          <CardContainer className="p-10 w-[300px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
-                className="card-item  hover:text-orange-500"
+                className="card-item  hover:text-orange-500 font-retro text-sm"
               >
                 Illustrator
                 <CardItem translateZ="100" className="w-full h-full mt-4">
@@ -106,11 +104,11 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-2 w-[250px]">
+          <CardContainer className="p-10 w-[300px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
-                className="card-item  hover:text-red-500"
+                className="card-item  hover:text-red-500 font-retro text-sm"
               >
                 Figma
                 <CardItem translateZ="100" className="w-full h-full mt-4">
@@ -126,11 +124,11 @@ const Skills: React.FC = () => {
             </CardBody>
           </CardContainer>
 
-          <CardContainer className="p-2 w-[250px]">
+          <CardContainer className="p-10 w-[300px]">
             <CardBody className="card-body">
               <CardItem
                 translateZ="50"
-                className="card-item  hover:text-green-500"
+                className="card-item  hover:text-green-500 font-retro text-sm"
               >
                 Davinci
                 <CardItem translateZ="100" className="w-full h-full mt-4">

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Serviceimage from "../../../assets/MO GRAPHS.png";
 import SmartphoneFrame from "../../../assets/squareframe.png";
 import Thumbnail1 from "../../../assets/thumbnail1.png";
 import Thumbnail2 from "../../../assets/thumbnail2.png";
@@ -9,6 +8,7 @@ import Thumbnail4 from "../../../assets/thumbnail4.png";
 import Thumbnail5 from "../../../assets/thumbnail5.png";
 import Thumbnail6 from "../../../assets/thumbnail6.png";
 import Thumbnail7 from "../../../assets/thumbnail7.png";
+import GamingText from "../../text/GamingText";
 // Ensure this path is correct
 export function Vidgallery() {
   const data = [
@@ -47,17 +47,11 @@ export function Vidgallery() {
 
   return (
     <div className="py-20">
-      <motion.img
-        src={Serviceimage}
-        alt="after effects"
-        className="mb-10 w-[250px]"
-        id="motiongraphics"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      />
+      <div className="mb-2 p-4">
+        <GamingText text="Motion Graphics" size="text-3xl" />
+      </div>
       <motion.p
-        className="text-left text-yellow-100"
+        className="text-left text-yellow-100 p-4 font-retro text-xs"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}

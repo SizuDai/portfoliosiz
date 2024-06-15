@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import ContactUsPageGraphic from "../../../assets/CONTACT US.png";
 import Scroll from "../../../assets/basic_scroll_by_trulymalicious_dgccekt.gif";
 import { useState } from "react";
 import text2 from "../../../assets/WORK WITH ME.png";
 import text3 from "../../../assets/WORK WITH ME 2.png";
+import GamingText from "../../text/GamingText";
 
 const ContactUs = () => {
   const InputStyle = ` mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200`;
@@ -46,14 +46,11 @@ const ContactUs = () => {
           }}
         >
           <div className="flex">
-            <img
-              src={ContactUsPageGraphic}
-              alt="Services Text"
-              className="mb-5 w-64 md:w-48 lg:w-64"
-              id="services"
-            />
+            <div className="mb-2 p-4">
+              <GamingText text="Contact Me" size="text-3xl" />
+            </div>
           </div>
-          <p className="my-5 text-lg text-left">
+          <p className="my-5 text-left p-4 font-retro text-xs">
             Loved My Works !!!
             <br />
             Fill up the form and let's create magic together.

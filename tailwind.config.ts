@@ -10,8 +10,24 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        'vignette': 'radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.5) 100%)'
+      },
+      // Extend boxShadow for glow effect
+      boxShadow: {
+        'glow': '0 0 8px rgba(255, 255, 255, 0.6)'
+      },
+      fontFamily: {
+        retro: ['"Press Start 2P"', 'cursive'],
+      },
       // your config here
     },
+  },
+  variants: {
+    extend: {
+      backgroundImage: ['hover', 'focus'],
+      boxShadow: ['hover', 'focus']
+    }
   },
   plugins: [
     addVariablesForColors,

@@ -61,7 +61,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.875rem;
-  margin-top: 4.35rem;
+  margin-top: 0.1rem;
+  margin-bottom: 1.35rem;
 }
 
 @media screen and (max-width: 768px) {

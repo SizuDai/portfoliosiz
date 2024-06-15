@@ -1,5 +1,5 @@
-import Serviceimage from "../../../assets/VFX.png";
 import { motion } from "framer-motion";
+import GamingText from "../../text/GamingText";
 export function GalleryWithCarousel() {
   const videos = [
     { videoid: "gaW7K9QB7-s", title: "Video 1" },
@@ -10,13 +10,10 @@ export function GalleryWithCarousel() {
 
   return (
     <section className="text-gray-600 body-font py-20">
-      <img
-        src={Serviceimage}
-        alt="after effects"
-        className="mb-10 w-[100px]"
-        id="vfx"
-      />
-      <p className="text-left text-yellow-100">
+      <div className="mb-2 p-4">
+        <GamingText text="VFX" size="text-3xl" />
+      </div>
+      <p className="text-left text-yellow-100 p-4 font-retro text-xs">
         There are several benefits to using VFX in advertising: <br />{" "}
         Creativity: VFX allows advertisers to push the boundaries of what's
         possible, creating visually stunning and memorable ads that capture the

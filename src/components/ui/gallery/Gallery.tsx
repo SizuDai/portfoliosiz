@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Serviceimage from "../../../assets/ANIMATIONS.png";
-import Seperateimage from "../../../assets/seperation.png";
 import Thumbnail1 from "../../../assets/thumbnaillg1.png";
 import Thumbnail2 from "../../../assets/thumbnaillg2.png";
 import Thumbnail3 from "../../../assets/thumbnaillg3.png";
 import Thumbnail4 from "../../../assets/thumbnaillg4.png";
 import Thumbnail5 from "../../../assets/thumbnaillg5.png";
 import { motion } from "framer-motion";
+import GamingText from "../../text/GamingText";
+import BackgroundImage from "../../../assets/animartionbg.svg"; // Your background image path
+
 export function Gallery() {
   const data = [
     { videoid: "hTwOilfdebY", thumbnail: Thumbnail4 },
@@ -20,19 +21,13 @@ export function Gallery() {
 
   return (
     <div className="mt-5">
-      <img
-        src={Seperateimage}
-        alt="Separation"
-        className=" flex m-auto h-60 mb-8"
-        id="animations"
-      />
-      <img
-        src={Serviceimage}
-        alt="After Effects"
-        className="mb-10 w-64 md:w-48 lg:w-64"
-        id="services"
-      />
-      <p className="text-left text-yellow-100 mb-10">
+      <div id="animations" className="flex flex-col items-center mb-20">
+        <GamingText text="Gallery" size="text-3xl md:text-5xl" />
+      </div>
+      <div className="mb-2 p-4">
+        <GamingText text="Animation" size="text-xl md:text-3xl" />
+      </div>
+      <p className="text-center text-yellow-100 mb-10 p-4 font-retro text-sm md:text-xs">
         Using animation can help a brand convey a simple message or explain
         complex concepts in a cost-effective and visually appealing way.
         <br />
@@ -40,11 +35,11 @@ export function Gallery() {
         strategy in a number of ways,
         <br />
         from adding it to your website to a short brand animation in an email
-        campaign. These are my works for the brands i have work with.
+        campaign. These are my works for the brands I have worked with.
       </p>
       <div className="flex flex-col items-center w-full mt-10">
         <motion.div
-          className="w-full max-w-5xl"
+          className="relative w-full max-w-xl md:max-w-5xl"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
@@ -52,21 +47,28 @@ export function Gallery() {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-          <iframe
-            src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&mute=1&loop=1&playlist=${activeVideo}`}
-            className="w-full h-64 md:h-80 lg:h-96 rounded-lg object-cover"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <div className="relative w-full h-48 md:h-80 lg:h-96">
+            <img
+              src={BackgroundImage}
+              alt="Background"
+              className="hidden lg:block absolute top-0 left-0 w-auto h-auto object-cover rounded-lg"
+            />
+            <iframe
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&mute=1&loop=1&playlist=${activeVideo}`}
+              className="absolute top-[13%] left-[25%] w-[52%] h-[76%] rounded-lg object-cover"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </motion.div>
-        <div className="flex flex-wrap justify-center mt-4">
+        <div className="flex justify-center absolute w-full mt-48 md:mt-[345px] shadow-inner">
           {data.map(({ videoid, thumbnail }, index) => (
             <button
               key={index}
               onClick={() => setActiveVideo(videoid)}
-              className="m-2 rounded overflow-hidden w-24 h-14 md:w-20 md:h-12"
+              className="m-2 rounded overflow-hidden w-16 h-9 md:w-20 md:h-12"
               title={`Thumbnail for video ${videoid}`}
             >
               <img

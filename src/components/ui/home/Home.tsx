@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
-import Me from "../../../assets/avatar-1 1.png";
-import textsub from "../../../assets/SIZAN SHORT.png";
-import text from "../../../assets/SIZAN LONG.png";
+import Me from "../../../assets/mepixel.png";
 import text2 from "../../../assets/WORK WITH ME.png";
 import text3 from "../../../assets/WORK WITH ME 2.png";
 import HeaderSocials from "./HeaderSocials";
+import GamingText from "../../text/GamingText";
 import { HeroHighlight } from "../AsUi/hero-highlight";
 
 const Home: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
   const handleHover = () => {
     setIsHovered(true);
   };
@@ -20,17 +17,6 @@ const Home: React.FC = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <section className="home container" id="home">
@@ -49,22 +35,17 @@ const Home: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           />
-          <motion.img
-            src={isMobile ? textsub : text}
-            alt=""
-            className="home__name w-[350px] sm:w-auto px-10 "
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1 }}
-          />
+          <div className=" m-5 ">
+            <GamingText text="Sizan Smith Lamichhane" size="text-xl" />
+          </div>
           <motion.span
-            className="home__education"
+            className="home__education font-retro text-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           >
             I'm a Motion Graphics Designer
-            <br className=" text-yellow-500" /> "I can do anything (I think so
+            <br className=" text-yellow-500 " /> "I can do anything (I think so
             ...)"
           </motion.span>
           <HeaderSocials />
