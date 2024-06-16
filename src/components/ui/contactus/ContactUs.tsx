@@ -7,7 +7,7 @@ import text3 from "../../../assets/WORK WITH ME 2.png";
 import GamingText from "../../text/GamingText";
 
 const ContactUs = () => {
-  const InputStyle = ` mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200`;
+  const InputStyle = ` mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200 font-retro`;
   const {
     register,
     trigger,
@@ -84,7 +84,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-red-400">
+                <p className="mt-1 text-red-400 font-retro">
                   {errors.name.type === "required" && "This field is required"}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 characters"}
@@ -100,7 +100,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-red-400">
+                <p className="mt-1 text-red-400 font-retro">
                   {errors.email.type === "required" && "This field is required"}
                   {errors.email.type === "pattern" && "Invalid email address."}
                 </p>
@@ -116,7 +116,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-red-400">
+                <p className="mt-1 text-red-400 font-retro">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
