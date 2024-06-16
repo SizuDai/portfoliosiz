@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Thumbnail1 from "../../../assets/thumbnaillg1.png";
 import Thumbnail2 from "../../../assets/thumbnaillg2.png";
 import Thumbnail3 from "../../../assets/thumbnaillg3.png";
@@ -17,7 +17,27 @@ export function Gallery() {
     { videoid: "6pjyjh3NVk4", thumbnail: Thumbnail1 },
   ];
 
-  const [activeVideo, setActiveVideo] = useState(data[0].videoid);
+  const [activeVideo, setActiveVideo] = useState(0);
+
+  useEffect(() => {
+    const handleKeyPress = (event: { key: string }) => {
+      if (event.key === "a") {
+        setActiveVideo(
+          (prevActiveVideo) => (prevActiveVideo + 1) % data.length
+        );
+      } else if (event.key === "b") {
+        setActiveVideo(
+          (prevActiveVideo) => (prevActiveVideo + data.length - 1) % data.length
+        );
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
 
   return (
     <div className="mt-5">
@@ -54,7 +74,7 @@ export function Gallery() {
               className="hidden lg:block absolute top-0 left-0 w-auto h-auto object-cover rounded-lg"
             />
             <iframe
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&mute=1&loop=1&playlist=${activeVideo}`}
+              src={`https://www.youtube.com/embed/${data[activeVideo].videoid}?autoplay=1&mute=1&loop=1&playlist=${data[activeVideo].videoid}`}
               className="absolute top-[13%] left-[25%] w-[52%] h-[76%] rounded-lg object-cover"
               title="YouTube video player"
               frameBorder="0"
@@ -67,7 +87,7 @@ export function Gallery() {
           {data.map(({ videoid, thumbnail }, index) => (
             <button
               key={index}
-              onClick={() => setActiveVideo(videoid)}
+              onClick={() => setActiveVideo(index)}
               className="m-2 rounded overflow-hidden w-16 h-9 md:w-20 md:h-12"
               title={`Thumbnail for video ${videoid}`}
             >

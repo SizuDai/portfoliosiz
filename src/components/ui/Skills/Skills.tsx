@@ -44,108 +44,42 @@ const Skills: React.FC = () => {
       </div>
       <section>
         <div className="flex flex-wrap justify-center">
-          <CardContainer className="p-10 w-[250px]">
-            <CardBody className="card-body">
-              <CardItem
-                translateZ="50"
-                className="card-item  hover:text-purple-500 font-retro text-sm"
-              >
-                AfterEffects
-                <CardItem translateZ="100" className="w-full h-full mt-4">
-                  <img
-                    src={hoveredImage === HoverImage1 ? HoverImage1 : Image1}
-                    className="card-image"
-                    alt="thumbnail"
-                    onMouseEnter={() => handleMouseEnter(HoverImage1)}
-                    onMouseLeave={handleMouseLeave}
-                  />
+          {[
+            { image: Image1, hoverImage: HoverImage1, title: "AfterEffects" },
+            { image: Image2, hoverImage: HoverImage2, title: "Photoshop" },
+            { image: Image3, hoverImage: HoverImage3, title: "Illustrator" },
+            { image: Image4, hoverImage: HoverImage4, title: "Figma" },
+            { image: Image5, hoverImage: HoverImage5, title: "Davinci" },
+          ].map((item, index) => (
+            <CardContainer
+              key={index}
+              className="p-2 sm:p-2 md:p-10 w-full sm:w-1/2 md:w-[250px]"
+            >
+              <CardBody className="card-body">
+                <CardItem
+                  translateZ="50"
+                  className="card-item hover:text-purple-500 font-retro text-sm"
+                >
+                  {item.title}
+                  <CardItem translateZ="100" className="w-full h-full mt-4">
+                    <img
+                      src={
+                        hoveredImage === item.hoverImage
+                          ? item.hoverImage
+                          : item.image
+                      }
+                      className="card-image"
+                      alt={item.title}
+                      onMouseEnter={() => handleMouseEnter(item.hoverImage)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  </CardItem>
                 </CardItem>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-
-          <CardContainer className="p-10 w-[250px]">
-            <CardBody className="card-body">
-              <CardItem
-                translateZ="50"
-                className="card-item hover:text-blue-500 font-retro text-sm"
-              >
-                Photoshop
-                <CardItem translateZ="100" className="w-full h-full mt-4">
-                  <img
-                    src={hoveredImage === HoverImage2 ? HoverImage2 : Image2}
-                    className="card-image"
-                    alt="thumbnail"
-                    onMouseEnter={() => handleMouseEnter(HoverImage2)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </CardItem>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-
-          <CardContainer className="p-10 w-[250px]">
-            <CardBody className="card-body">
-              <CardItem
-                translateZ="50"
-                className="card-item  hover:text-orange-500 font-retro text-sm"
-              >
-                Illustrator
-                <CardItem translateZ="100" className="w-full h-full mt-4">
-                  <img
-                    src={hoveredImage === HoverImage5 ? HoverImage5 : Image5}
-                    className="card-image"
-                    alt="thumbnail"
-                    onMouseEnter={() => handleMouseEnter(HoverImage5)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </CardItem>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-
-          <CardContainer className="p-10 w-[250px]">
-            <CardBody className="card-body">
-              <CardItem
-                translateZ="50"
-                className="card-item  hover:text-red-500 font-retro text-sm"
-              >
-                Figma
-                <CardItem translateZ="100" className="w-full h-full mt-4">
-                  <img
-                    src={hoveredImage === HoverImage3 ? HoverImage3 : Image3}
-                    className="card-image"
-                    alt="thumbnail"
-                    onMouseEnter={() => handleMouseEnter(HoverImage3)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </CardItem>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-
-          <CardContainer className="p-10 w-[250px]">
-            <CardBody className="card-body">
-              <CardItem
-                translateZ="50"
-                className="card-item  hover:text-green-500 font-retro text-sm"
-              >
-                Davinci
-                <CardItem translateZ="100" className="w-full h-full mt-4">
-                  <img
-                    src={hoveredImage === HoverImage4 ? HoverImage4 : Image4}
-                    className="card-image"
-                    alt="thumbnail"
-                    onMouseEnter={() => handleMouseEnter(HoverImage4)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </CardItem>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
+              </CardBody>
+            </CardContainer>
+          ))}
         </div>
         <AboutBox projectsCompleted={1197} clients={213} />
-        <div className="vortex-container"></div>
       </section>
     </motion.div>
   );

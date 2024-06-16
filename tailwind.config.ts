@@ -10,6 +10,13 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        'retro-yellow': '#FFFF00', // Bright yellow for text
+        'retro-black': '#000000', // Deep black for background
+      },
+      borderWidth: {
+        'pixel': '4px', // Custom border width to simulate pixel border
+      },
       backgroundImage: {
         'vignette': 'radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.5) 100%)'
       },

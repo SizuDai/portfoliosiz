@@ -13,9 +13,17 @@
 
 .home__img {
   text-align: center;
-  width: 190px;
+  width: 390px;
   margin: auto;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .home__img {
+    text-align: center;
+    width: 190px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
 }
 .home__name {
   font-size: var(--h1-font-size);
