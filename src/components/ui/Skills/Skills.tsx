@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./skills.css";
 import Image1 from "../../../assets/Adobe05.png";
 import Image2 from "../../../assets/Adobe04.png";
-import Image3 from "../../../assets/Adobe02.png";
-import Image4 from "../../../assets/Adobe01.png";
-import Image5 from "../../../assets/Adobe03.png";
+import Image3 from "../../../assets/Adobe03.png";
+import Image4 from "../../../assets/Adobe02.png";
+import Image5 from "../../../assets/Adobe01.png";
 import HoverImage1 from "../../../assets/Adobe05.png";
 import HoverImage2 from "../../../assets/Adobe04.png";
-import HoverImage3 from "../../../assets/Adobe02.png";
-import HoverImage4 from "../../../assets/Adobe01.png";
-import HoverImage5 from "../../../assets/Adobe03.png";
+import HoverImage3 from "../../../assets/Adobe03.png";
+import HoverImage4 from "../../../assets/Adobe02.png";
+import HoverImage5 from "../../../assets/Adobe01.png";
 import { CardBody, CardContainer, CardItem } from "../3d-card";
 import AboutBox from "./AboutBox";
 import { motion } from "framer-motion";
@@ -58,7 +58,7 @@ const Skills: React.FC = () => {
               <CardBody className="card-body">
                 <CardItem
                   translateZ="50"
-                  className="card-item hover:text-purple-500 font-retro text-sm"
+                  className="card-item hover: font-retro text-sm"
                 >
                   {item.title}
                   <CardItem translateZ="100" className="w-full h-full mt-4">
