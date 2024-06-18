@@ -47,7 +47,7 @@ export function Gallery() {
       <div className="mb-2 p-4">
         <GamingText text="Animation" size="text-xl md:text-3xl" />
       </div>
-      <p className="text-center text-yellow-100 mb-10 p-4 font-retro text-sm md:text-xs">
+      <p className=" text-yellow-100 mb-10 p-4 font-retro text-sm text-left md:text-xs">
         Using animation can help a brand convey a simple message or explain
         complex concepts in a cost-effective and visually appealing way.
         <br />

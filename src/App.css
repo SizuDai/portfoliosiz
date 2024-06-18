@@ -1,9 +1,20 @@
 .main {
-  margin-left: 130px;
+  margin-left: 130px; /* Original left margin might cause overflow */
+  margin-right: 0; /* Ensure no margin on the right */
+  padding: 20px; /* Example padding, adjust as necessary */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  max-width: calc(100% - 130px); /* Adjust max-width to prevent overflow */
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    margin: 20px;
+    margin: 20px; /* Adequate margin for smaller devices */
+    max-width: calc(100% - 40px); /* Adjust for margins on smaller screens */
   }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
