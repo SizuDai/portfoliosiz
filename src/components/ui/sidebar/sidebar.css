@@ -28,7 +28,7 @@ aside {
 
 .nav__link:hover svg {
   transform: scale(1.1);
-  fill: #ff9000; /* Change the color as desired */
+  fill: #ffffff; /* Change the color as desired */
 }
 
 /* Sidebar Links *
