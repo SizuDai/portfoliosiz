@@ -9,7 +9,7 @@ export function GalleryWithCarousel() {
   ];
 
   return (
-    <section className="text-gray-600 body-font py-20">
+    <section id="vfx" className="text-gray-600 body-font mt-5 mb-20">
       <div className="mb-2 p-4">
         <GamingText text="VFX" size="text-3xl" />
       </div>

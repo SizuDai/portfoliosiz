@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
 
   return (
     <motion.div
-      className="mt-5 drop-shadow-xl"
+      className="drop-shadow-xl mt-5 mb-20"
       id="about"
       initial="hidden"
       whileInView="visible"

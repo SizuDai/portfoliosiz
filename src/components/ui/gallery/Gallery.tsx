@@ -40,7 +40,7 @@ export function Gallery() {
   }, []);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 mb-20">
       <div id="animations" className="flex flex-col items-center mb-20">
         <GamingText text="Gallery" size="text-3xl md:text-5xl" />
       </div>

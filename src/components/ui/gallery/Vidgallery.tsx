@@ -47,7 +47,7 @@ export function Vidgallery() {
 
   return (
     <div className="py-20">
-      <div className="mb-2 p-4">
+      <div id="motiongraphic" className="mb-2 p-4">
         <GamingText text="Motion Graphics" size="text-3xl" />
       </div>
       <motion.p

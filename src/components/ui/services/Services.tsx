@@ -8,7 +8,7 @@ import GamingText from "../../text/GamingText";
 export function Services() {
   return (
     <motion.div
-      className=" py-20 "
+      className=" mt-5 mb-20"
       id="services"
       initial="hidden"
       whileInView="visible"
@@ -49,7 +49,7 @@ export function Services() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
             <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-transparenth-auto md:h-full flex flex-col">
               <a
-                href="#motiongraphics"
+                href="#motiongraphic"
                 className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 flex-grow"
               >
                 <img
