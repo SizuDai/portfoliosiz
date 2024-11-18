@@ -44,13 +44,12 @@ export function Gallery() {
       <div id="animations" className="flex flex-col items-center mb-20">
         <GamingText text="Gallery" size="text-3xl md:text-5xl" />
       </div>
-      <div className="mb-2 p-4">
+      <div className="mb-2">
         <GamingText text="Animation" size="text-xl md:text-3xl" />
       </div>
-      <p className=" text-yellow-100 mb-10 p-4 font-retro text-sm text-left md:text-xs">
+      <p className=" mt-5 text-left text-yellow-1000 font-hind font-semibold text-base">
         Using animation can help a brand convey a simple message or explain
         complex concepts in a cost-effective and visually appealing way.
-        <br />
         Animation is very versatile and can be included in your marketing
         strategy in a number of ways,
         <br />

@@ -19,10 +19,10 @@ export function Services() {
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <div className="mb-2 p-4">
+      <div className="">
         <GamingText text="Services" size="text-3xl" />
       </div>
-      <p className="text-left text-yellow-100 p-4 font-retro text-xs">
+      <p className="mt-5 text-left text-yellow-1000 font-hind font-semibold text-base">
         Captivating Visual Content Creation
         <br />
         <span className="font-bold size-2">
@@ -36,9 +36,9 @@ export function Services() {
         <br />I also provide services related to thumbnail design, viral shorts
         edits.
       </p>
-      <section className="bg-transparent align-middle py-10 px-10">
+      <section className="bg-transparent align-middle py-5">
         <motion.div
-          className="py-2 mx-auto max-w-screen-xl sm:py-4"
+          className="py-2 mx-auto max-w-screen-xl"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{

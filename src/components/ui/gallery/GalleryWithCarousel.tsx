@@ -10,17 +10,17 @@ export function GalleryWithCarousel() {
 
   return (
     <section id="vfx" className="text-gray-600 body-font mt-5 mb-20">
-      <div className="mb-2 p-4">
+      <div className="mb-2">
         <GamingText text="VFX" size="text-3xl" />
       </div>
-      <p className="text-left text-yellow-100 p-4 font-retro text-xs">
+      <p className="mt-5 text-left text-yellow-100 font-hind font-semibold text-base">
         There are several benefits to using VFX in advertising: <br />{" "}
         Creativity: VFX allows advertisers to push the boundaries of what's
         possible, creating visually stunning and memorable ads that capture the
         viewer's attention.
       </p>
       <motion.div
-        className="container py-0 m-auto mt-10 "
+        className="container py-0 m-auto mt-20 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

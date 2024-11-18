@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         retro: ['"Press Start 2P"', 'cursive'],
+        hind: ['"Hind"', 'sans-serif'],
       },
       // your config here
     },

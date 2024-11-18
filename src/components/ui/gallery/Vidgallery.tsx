@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import SmartphoneFrame from "../../../assets/squareframe.png";
 import Thumbnail1 from "../../../assets/thumbnail1.png";
 import Thumbnail2 from "../../../assets/thumbnail2.png";
 import Thumbnail3 from "../../../assets/thumbnail3.png";
@@ -46,12 +45,12 @@ export function Vidgallery() {
   const [activeVideo, setActiveVideo] = useState(data[0].videoid);
 
   return (
-    <div className="py-20">
-      <div id="motiongraphic" className="mb-2 p-4">
+    <div className="mt-40">
+      <div id="motiongraphic" className="mb-2">
         <GamingText text="Motion Graphics" size="text-3xl" />
       </div>
       <motion.p
-        className="text-left text-yellow-100 p-4 font-retro text-xs"
+        className="mt-5 text-left text-yellow-1000 font-hind font-semibold text-base"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -87,11 +86,6 @@ export function Vidgallery() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src={SmartphoneFrame}
-            alt="Square Frame"
-            className="absolute top-0 left-0 w-full h-full"
-          />
           <motion.div
             className="absolute top-[15%] left-[15%] w-[70%] h-[70%]"
             initial={{ opacity: 0, y: 20 }}

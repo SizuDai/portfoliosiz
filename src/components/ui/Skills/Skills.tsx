@@ -11,7 +11,6 @@ import HoverImage3 from "../../../assets/Adobe03.png";
 import HoverImage4 from "../../../assets/Adobe02.png";
 import HoverImage5 from "../../../assets/Adobe01.png";
 import { CardBody, CardContainer, CardItem } from "../3d-card";
-import AboutBox from "./AboutBox";
 import { motion } from "framer-motion";
 import GamingText from "../../text/GamingText";
 
@@ -43,7 +42,7 @@ const Skills: React.FC = () => {
         <GamingText text="Skills" size="text-3xl" />
       </div>
       <section>
-        <div className="flex flex-wrap justify-center">
+        <div className="flex justify-center gap-2 sm:gap-4 mt-4">
           {[
             { image: Image1, hoverImage: HoverImage1, title: "AfterEffects" },
             { image: Image2, hoverImage: HoverImage2, title: "Photoshop" },
@@ -53,22 +52,26 @@ const Skills: React.FC = () => {
           ].map((item, index) => (
             <CardContainer
               key={index}
-              className="p-2 sm:p-2 md:p-10 w-full sm:w-1/2 md:w-[250px]"
+              className="p-1 w-full xs:w-1/3 sm:w-1/3 md:w-[200px] lg:w-[250px]" // Smaller padding for mobile
             >
               <CardBody className="card-body">
                 <CardItem
-                  translateZ="50"
-                  className="card-item hover: font-retro text-sm"
+                  translateZ="30"
+                  className=" flex-auto card-item font-retro text-xs sm:text-sm md:text-base "
                 >
-                  {item.title}
-                  <CardItem translateZ="100" className="w-full h-full mt-4">
+                  <span className="hidden sm:block">{item.title}</span>{" "}
+                  {/* Hide title on mobile */}
+                  <CardItem
+                    translateZ="100"
+                    className="w-full h-full mt-2 sm:mt-4"
+                  >
                     <img
                       src={
                         hoveredImage === item.hoverImage
                           ? item.hoverImage
                           : item.image
                       }
-                      className="card-image"
+                      className="card-image w-[70px] sm:w-[100px] md:w-[150px] lg:w-[200px]"
                       alt={item.title}
                       onMouseEnter={() => handleMouseEnter(item.hoverImage)}
                       onMouseLeave={handleMouseLeave}
@@ -79,7 +82,6 @@ const Skills: React.FC = () => {
             </CardContainer>
           ))}
         </div>
-        <AboutBox projectsCompleted={1197} clients={213} />
       </section>
     </motion.div>
   );
