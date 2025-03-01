@@ -1,9 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
       {
         "source": "/:path*",
-        "destination": "https://sizansmith.framer.website/",
-        "permanent": true
+        "destination": "https://sizansmith.framer.website/:path*"
       }
     ]
   }
