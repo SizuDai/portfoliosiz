@@ -1,4 +1,5 @@
 .home {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,13 +32,6 @@
   margin: auto;
   width: 540px;
   margin-bottom: 0.5rem;
-}
-
-.home__education {
-  margin: 1.5rem 0;
-  font-size: 1.5rem;
-  font-weight: var(--font-medium);
-  margin-bottom: 1.5rem;
 }
 
 .home_socials {

@@ -1,20 +1,38 @@
+/* main.css */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .main {
-  margin-left: 130px; /* Original left margin might cause overflow */
-  margin-right: 0; /* Ensure no margin on the right */
-  padding: 20px; /* Example padding, adjust as necessary */
-  box-sizing: border-box; /* Include padding and border in the element's width */
-  max-width: calc(100% - 130px); /* Adjust max-width to prevent overflow */
+  margin: 0 auto; /* Center the content horizontally */
+  align-items: center;
+  padding: 10px; /* Consistent padding */
+  box-sizing: border-box; /* Include padding & border in width */
+  max-width: 1200px; /* Adjust as needed for responsiveness */
+  width: calc(100% - 130px); /* Prevent overflow but keep spacing */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Adjust margins on smaller screens */
+@media screen and (max-width: 1024px) {
+  .main {
+    width: calc(100% - 60px); /* Reduce max-width for better fit */
+  }
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    margin: 20px; /* Adequate margin for smaller devices */
-    max-width: calc(100% - 40px); /* Adjust for margins on smaller screens */
+    width: calc(100% - 40px); /* More compact spacing on mobile */
+    padding: 15px; /* Adjust padding */
   }
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden; /* Hide horizontal overflow */
 }

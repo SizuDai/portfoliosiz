@@ -36,7 +36,6 @@ export const CardContainer = ({
 
   const handleMouseEnter = (_e: React.MouseEvent<HTMLDivElement>) => {
     setIsMouseEntered(true);
-    if (!containerRef.current) return;
   };
 
   const handleMouseLeave = (_e: React.MouseEvent<HTMLDivElement>) => {
@@ -44,16 +43,12 @@ export const CardContainer = ({
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
+
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn(
-          " mt-5 mb-5 flex items-center justify-center",
-          containerClassName
-        )}
-        style={{
-          perspective: "1000px",
-        }}
+        className={cn("flex items-center justify-center", containerClassName)}
+        style={{ perspective: "1000px" }}
       >
         <div
           ref={containerRef}
@@ -64,9 +59,7 @@ export const CardContainer = ({
             "flex items-center justify-center relative transition-all duration-200 ease-linear",
             className
           )}
-          style={{
-            transformStyle: "preserve-3d",
-          }}
+          style={{ transformStyle: "preserve-3d" }}
         >
           {children}
         </div>
@@ -84,8 +77,9 @@ export const CardBody = ({
 }) => {
   return (
     <div
+      // Removed fixed height/width to let the content size naturally.
       className={cn(
-        "h-76 w-76 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "w-full h-auto [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
@@ -144,7 +138,6 @@ export const CardItem = ({
   );
 };
 
-// Create a hook to use the context
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {

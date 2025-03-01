@@ -7,7 +7,7 @@ import text3 from "../../../assets/WORK WITH ME 2.png";
 import GamingText from "../../text/GamingText";
 
 const ContactUs = () => {
-  const InputStyle = ` mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200 font-retro`;
+  const InputStyle = `mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200 font-retro`;
   const {
     register,
     trigger,
@@ -32,10 +32,14 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact" className="mx-auto gray">
+    <section
+      id="contact"
+      className="container mx-auto py-16 px-4 overflow-hidden"
+    >
       <motion.div>
+        {/* Header Section */}
         <motion.div
-          className="md:w-3/5"
+          className="w-full md:w-3/5 mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -45,20 +49,21 @@ const ContactUs = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="flex">
-            <div className="mb-2">
-              <GamingText text="Contact Me" size="text-3xl" />
-            </div>
+          <div className="mb-4 text-center">
+            <GamingText text="Contact Me" size="text-3xl" />
           </div>
-          <p className="mt-5 text-left text-yellow-1000 font-hind font-semibold text-base">
+          <p className="mt-4 text-center text-yellow-1000 font-hind font-semibold text-base">
             Loved My Works !!!
             <br />
             Fill up the form and let's create magic together.
           </p>
         </motion.div>
-        <div className="mt-5 justify-between gap-8 md:flex">
+
+        {/* Form & Graphic */}
+        <div className="mt-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+          {/* Form Section */}
           <motion.div
-            className="mt-10 basis-3/5 md:mt-0"
+            className="w-full md:basis-3/5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -123,26 +128,26 @@ const ContactUs = () => {
                     "Max length is 2000 characters."}
                 </p>
               )}
-              <div className=" mt-10 px-5 relative  align-middle inline-flex group">
+              <div className="mt-8 text-center">
                 <button
                   type="submit"
-                  className="relative inline-flex items-center justify-center px-8 py-4 text-2xl font-bold text-yellow-100 transition-all duration-200 bg-slate-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-900"
+                  className="inline-flex items-center justify-center px-8 py-4 text-2xl font-bold text-yellow-100 transition-all duration-200 bg-slate-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-900"
                   onMouseEnter={handleHover}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div>
-                    {isHovered ? (
-                      <img src={text3} alt="Hover Text" className="h-7" />
-                    ) : (
-                      <img src={text2} alt="Default Text" className="h-7" />
-                    )}
-                  </div>
+                  {isHovered ? (
+                    <img src={text3} alt="Hover Text" className="h-7" />
+                  ) : (
+                    <img src={text2} alt="Default Text" className="h-7" />
+                  )}
                 </button>
               </div>
             </form>
           </motion.div>
+
+          {/* Graphic Section */}
           <motion.div
-            className="relative mt-16 basis-2/5 md:mt-0"
+            className="w-full md:basis-2/5 relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -152,9 +157,9 @@ const ContactUs = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
+            <div className="relative">
               <img
-                className=" m-auto w-[400px]"
+                className="mx-auto w-[400px]"
                 alt="Contact Us Page Graphic"
                 src={Scroll}
               />

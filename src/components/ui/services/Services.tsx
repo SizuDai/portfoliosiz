@@ -7,25 +7,17 @@ import { motion } from "framer-motion";
 import GamingText from "../../text/GamingText";
 export function Services() {
   return (
-    <motion.div
-      className=" mt-5 mb-20"
-      id="services"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
-      }}
-    >
-      <div className="">
-        <GamingText text="Services" size="text-3xl" />
+    <div className="mt-8 mb-24 text-center px-6" id="services">
+      {/* Title */}
+      <div className="mb-6">
+        <GamingText text="Services" size="text-4xl font-bold" />
       </div>
-      <p className="mt-5 text-left text-yellow-1000 font-hind font-semibold text-base">
+
+      {/* Description */}
+      <p className="text-yellow-1000 font-hind font-medium text-lg leading-relaxed max-w-3xl mx-auto mb-12">
         Captivating Visual Content Creation
         <br />
-        <span className="font-bold size-2">
+        <span className="font-bold text-xl">
           Motion Graphics | Graphic Design | VFX | Character Explainers | Video
           Editing
         </span>
@@ -33,10 +25,12 @@ export function Services() {
         As a versatile creative professional, I specialize in crafting visually
         stunning content to elevate your brand and captivate your audience.
         Contact me to unlock the power of visuals and achieve your goals.
-        <br />I also provide services related to thumbnail design, viral shorts
-        edits.
+        <br />I also provide services related to **thumbnail design, viral
+        shorts edits.**
       </p>
-      <section className="bg-transparent align-middle py-5">
+
+      {/* Services Grid */}
+      <section className="bg-transparent py-8">
         <motion.div
           className="py-2 mx-auto max-w-screen-xl"
           viewport={{ once: true, amount: 0.5 }}
@@ -46,11 +40,11 @@ export function Services() {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
-            <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-transparenth-auto md:h-full flex flex-col">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+            <div className="col-span-2 sm:col-span-1 md:col-span-2 flex flex-col">
               <a
                 href="#motiongraphic"
-                className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 flex-grow"
+                className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 flex-grow text-center"
               >
                 <img
                   src={Image2}
@@ -58,68 +52,73 @@ export function Services() {
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-strong-vignette"></div>
-                <h3 className="font-retro z-10 text-xs text-yellow-100 absolute top-0 left-0 p-4 xs:text-sm md:text-sm">
+                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Motion Graphics
                 </h3>
               </a>
             </div>
-            <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-transparent">
+
+            <div className="col-span-2 sm:col-span-1 md:col-span-2 flex flex-col">
               <a
                 href="#animations"
-                className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4"
+                className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 text-center"
               >
                 <img
                   src={Image4}
-                  alt=""
+                  alt="Character Animation"
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                <h3 className=" font-retro z-10 text-xs  text-yellow-100 absolute top-0 left-0 p-4 xs:text-sm md:text-sm">
+                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Character Animation
                 </h3>
               </a>
-              <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+
+              <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 mt-6">
                 <a
                   href="#vfx"
-                  className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40"
+                  className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 text-center"
                 >
                   <img
                     src={Image6}
-                    alt=""
+                    alt="VFX"
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                  <h3 className=" font-retro z-10 text-xs  text-blue-100 absolute top-0 left-0 p-4 xs:text-sm md:text-sm">
+                  <h3 className="font-retro z-10 text-sm text-blue-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                     VFX
                   </h3>
                 </a>
+
                 <a
-                  href=""
-                  className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40"
+                  href="#logodesign"
+                  className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 text-center"
                 >
                   <img
                     src={Image5}
-                    alt=""
+                    alt="Logo Design"
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                  <h3 className=" font-retro z-10 text-xs  text-yellow-100 absolute top-0 left-0 p-4 xs:text-sm md:text-sm">
+                  <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                     Logo Design
                   </h3>
                 </a>
               </div>
             </div>
-            <div className="col-span-2 sm:col-span-1 md:col-span-1bg-transparenth-auto md:h-full flex flex-col">
+
+            <div className="col-span-2 sm:col-span-1 md:col-span-1 flex flex-col">
               <a
-                href=""
-                className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow"
+                href="#graphicsdesign"
+                className="group relative flex flex-col overflow-hidden rounded-lg pb-4 pt-40 text-center"
               >
                 <img
                   src={Image3}
+                  alt="Graphics Design"
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                <h3 className=" font-retro z-10 text-xs  text-yellow-100 absolute top-0 left-0 p-4 xs:text-sm md:text-sm">
+                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Graphics Design
                 </h3>
               </a>
@@ -127,6 +126,6 @@ export function Services() {
           </div>
         </motion.div>
       </section>
-    </motion.div>
+    </div>
   );
 }

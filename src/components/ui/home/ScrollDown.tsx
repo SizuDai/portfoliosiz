@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ScrollDown: React.FC = () => {
   return (
@@ -11,6 +11,6 @@ const ScrollDown: React.FC = () => {
       </a>
     </div>
   );
-}
+};
 
 export default ScrollDown;
