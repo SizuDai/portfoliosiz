@@ -5,7 +5,6 @@ import {
   FiArrowLeft,
   FiArrowRight,
   FiArrowUp,
-  FiX,
 } from "react-icons/fi";
 
 const videoProjects = [
@@ -43,7 +42,7 @@ export default function VideoProject() {
   const [showVideoSection, setShowVideoSection] = useState(false);
   const [showGuide, setShowGuide] = useState(true);
   const [activeCategory, setActiveCategory] = useState("shorts-reels");
-  const [selectedVideo, setSelectedVideo] = useState<{
+  const [] = useState<{
     videoId: string;
   } | null>(null);
   const [scrollIndex, setScrollIndex] = useState(0);
