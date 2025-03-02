@@ -9,14 +9,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Sidebar />
       <div className="main">
         <Home />
-        <Skills />
-        <ScrollVideo />
-        <Services />
-        <VideoProjects />
-        <ContactUs />
       </div>
     </>
   );
