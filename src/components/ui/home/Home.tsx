@@ -4,40 +4,54 @@ import { motion, AnimatePresence } from "framer-motion";
 const Home: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPressed, setIsPressed] = useState(false); // New state for press effect
   const ambientSoundRef = useRef<HTMLAudioElement | null>(null);
   const transitionSoundRef = useRef<HTMLAudioElement | null>(null);
+  const portalRef = useRef<HTMLAnchorElement | null>(null);
 
   const handleHover = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
   const handlePortalClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    setIsTransitioning(true);
-    if (transitionSoundRef.current) {
-      transitionSoundRef.current.play(); // Play transition sound on click
-    }
+    setIsPressed(true); // Trigger press effect
     setTimeout(() => {
-      window.location.href = "https://sizansmith.framer.website/";
-    }, 2500); // Match transition duration
+      setIsTransitioning(true); // Start transition after press animation
+      if (transitionSoundRef.current) {
+        transitionSoundRef.current.play(); // Play transition sound
+      }
+      setTimeout(() => {
+        window.location.href = "https://sizansmith.framer.website/";
+      }, 2500); // Redirect after tunnel
+    }, 300); // Short delay for press effect before transition
   };
 
-  // Setup ambient sound on component mount
+  // Setup ambient sound and auto-press on mount
   useEffect(() => {
+    // Ambient sound setup
     if (ambientSoundRef.current) {
       ambientSoundRef.current.loop = true;
-      ambientSoundRef.current.volume = 0.2; // Low volume for subtle effect
+      ambientSoundRef.current.volume = 0.2;
       ambientSoundRef.current.play().catch((error) => {
         console.log("Ambient sound blocked by browser:", error);
       });
     }
 
-    // Cleanup on unmount
+    // Auto-press the portal after a delay
+    const autoPressTimer = setTimeout(() => {
+      if (portalRef.current && !isTransitioning) {
+        portalRef.current.click(); // Trigger click programmatically
+      }
+    }, 3500); // 5 seconds delay before auto-press
+
+    // Cleanup
     return () => {
       if (ambientSoundRef.current) {
         ambientSoundRef.current.pause();
       }
+      clearTimeout(autoPressTimer);
     };
-  }, []);
+  }, [isTransitioning]);
 
   return (
     <section
@@ -157,6 +171,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
           >
             <a
+              ref={portalRef}
               href="https://sizansmith.framer.website/"
               className="relative flex items-center justify-center w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96"
               onMouseEnter={handleHover}
@@ -168,16 +183,24 @@ const Home: React.FC = () => {
                 className="absolute w-full h-full rounded-full border-4 border-yellow-400 opacity-70"
                 animate={{
                   rotate: [0, 360],
-                  scale: isHovered ? 1.1 : 1,
-                  borderColor: isHovered ? "#ffcc00" : "#ffff00",
+                  scale: isPressed ? 0.95 : isHovered ? 1.1 : 1, // Shrink when pressed
+                  borderWidth: isPressed ? 6 : 4, // Thicken border when pressed
+                  borderColor: isPressed
+                    ? "#ffaa00"
+                    : isHovered
+                    ? "#ffcc00"
+                    : "#ffff00",
                 }}
                 transition={{
                   rotate: { duration: 5, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 0.4 },
+                  scale: { duration: 0.3, ease: "easeInOut" },
+                  borderWidth: { duration: 0.3 },
                   borderColor: { duration: 0.3 },
                 }}
                 style={{
-                  boxShadow: "0 0 20px rgba(255, 255, 0, 0.7)",
+                  boxShadow: isPressed
+                    ? "0 0 30px rgba(255, 170, 0, 0.9)" // Brighter shadow when pressed
+                    : "0 0 20px rgba(255, 255, 0, 0.7)",
                   filter: "blur(2px)",
                 }}
               />
@@ -204,7 +227,7 @@ const Home: React.FC = () => {
               />
               <motion.span
                 className="relative z-10 text-xl sm:text-2xl md:text-3xl font-bold text-yellow-200 bg-black/50 px-4 py-2 rounded-lg"
-                animate={{ y: isHovered ? -10 : 0 }}
+                animate={{ y: isPressed ? 5 : isHovered ? -10 : 0 }} // Slight push down when pressed
                 transition={{ duration: 0.3 }}
                 style={{
                   textShadow:
@@ -279,7 +302,7 @@ const Home: React.FC = () => {
           >
             <div
               className="w-full h-full relative overflow-hidden"
-              style={{ background: "#121212", perspective: "1200px" }} // Changed to #121212 during tunnel
+              style={{ background: "#121212", perspective: "1200px" }}
             >
               {[...Array(30)].map((_, i) => (
                 <motion.div
