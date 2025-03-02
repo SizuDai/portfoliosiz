@@ -279,7 +279,7 @@ const Home: React.FC = () => {
           >
             <div
               className="w-full h-full relative overflow-hidden"
-              style={{ background: "black", perspective: "1200px" }}
+              style={{ background: "#121212", perspective: "1200px" }} // Changed to #121212 during tunnel
             >
               {[...Array(30)].map((_, i) => (
                 <motion.div
