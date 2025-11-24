@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sizan-lamichhane.vercel.app/sitemap.xml
