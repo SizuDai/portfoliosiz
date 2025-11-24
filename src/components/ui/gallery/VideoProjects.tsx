@@ -128,7 +128,7 @@ export function VideoProjects() {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full font-retro text-sm transition-colors border border-transparent ${
+            className={`px-5 py-2 rounded-full font-display text-sm transition-colors border border-transparent ${
               activeCategory === cat
                 ? "bg-yellow-1000 text-yellow-500 shadow-md"
                 : "bg-gray-800 text-yellow-100 hover:text-yellow-400 hover:bg-gray-500"
@@ -168,7 +168,7 @@ export function VideoProjects() {
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 p-4">
-              <h3 className="font-retro text-yellow-100 text-lg">
+              <h3 className="font-display text-yellow-100 text-lg">
                 {project.title}
               </h3>
               <p className="text-sm text-gray-300">

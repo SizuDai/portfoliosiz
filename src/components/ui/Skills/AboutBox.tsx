@@ -16,8 +16,8 @@ const AboutBox: React.FC<AboutBoxProps> = ({ projectsCompleted, clients }) => {
         <img src={fire} alt="" className=" h-20" />
 
         <div>
-          <h3 className="about__title font-retro">{projectsCompleted + "+"}</h3>
-          <span className="about__subtitle font-retro">Project Completed</span>
+          <h3 className="about__title font-display">{projectsCompleted + "+"}</h3>
+          <span className="about__subtitle font-display">Project Completed</span>
         </div>
       </div>
 
@@ -25,8 +25,8 @@ const AboutBox: React.FC<AboutBoxProps> = ({ projectsCompleted, clients }) => {
         <img src={magicball} alt="" className=" h-[100px]" />
 
         <div>
-          <h3 className="about__title font-retro">{clients + "+"}</h3>
-          <span className="about__subtitle font-retro">Satisfied Clients</span>
+          <h3 className="about__title font-display">{clients + "+"}</h3>
+          <span className="about__subtitle font-display">Satisfied Clients</span>
         </div>
       </div>
     </div>

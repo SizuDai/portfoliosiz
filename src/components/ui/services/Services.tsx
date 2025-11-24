@@ -14,7 +14,7 @@ export function Services() {
       </div>
 
       {/* Description */}
-      <p className="text-yellow-1000 font-hind font-medium text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+      <p className="text-yellow-1000 font-sans font-medium text-lg leading-relaxed max-w-3xl mx-auto mb-12">
         Captivating Visual Content Creation
         <br />
         <span className="font-bold text-xl">
@@ -52,7 +52,7 @@ export function Services() {
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-strong-vignette"></div>
-                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
+                <h3 className="font-display z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Motion Graphics
                 </h3>
               </a>
@@ -69,7 +69,7 @@ export function Services() {
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
+                <h3 className="font-display z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Character Animation
                 </h3>
               </a>
@@ -85,7 +85,7 @@ export function Services() {
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                  <h3 className="font-retro z-10 text-sm text-blue-100 absolute top-4 left-1/2 transform -translate-x-1/2">
+                  <h3 className="font-display z-10 text-sm text-blue-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                     VFX
                   </h3>
                 </a>
@@ -100,7 +100,7 @@ export function Services() {
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                  <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
+                  <h3 className="font-display z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                     Logo Design
                   </h3>
                 </a>
@@ -118,7 +118,7 @@ export function Services() {
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                <h3 className="font-retro z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
+                <h3 className="font-display z-10 text-sm text-yellow-100 absolute top-4 left-1/2 transform -translate-x-1/2">
                   Graphics Design
                 </h3>
               </a>

@@ -7,7 +7,7 @@ import text3 from "../../../assets/WORK WITH ME 2.png";
 import GamingText from "../../text/GamingText";
 
 const ContactUs = () => {
-  const InputStyle = `mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200 font-retro`;
+  const InputStyle = `mb-5 w-full rounded-lg px-5 py-3 bg-gray-800 placeholder-yellow-200 font-display`;
   const {
     register,
     trigger,
@@ -52,7 +52,7 @@ const ContactUs = () => {
           <div className="mb-4 text-center">
             <GamingText text="Contact Me" size="text-3xl" />
           </div>
-          <p className="mt-4 text-center text-yellow-1000 font-hind font-semibold text-base">
+          <p className="mt-4 text-center text-yellow-1000 font-sans font-semibold text-base">
             Loved My Works !!!
             <br />
             Fill up the form and let's create magic together.
@@ -89,7 +89,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-red-400 font-retro">
+                <p className="mt-1 text-red-400 font-display">
                   {errors.name.type === "required" && "This field is required"}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 characters"}
@@ -105,7 +105,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-red-400 font-retro">
+                <p className="mt-1 text-red-400 font-display">
                   {errors.email.type === "required" && "This field is required"}
                   {errors.email.type === "pattern" && "Invalid email address."}
                 </p>
@@ -121,7 +121,7 @@ const ContactUs = () => {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-red-400 font-retro">
+                <p className="mt-1 text-red-400 font-display">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&

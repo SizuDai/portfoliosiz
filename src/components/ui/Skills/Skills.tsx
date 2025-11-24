@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
               <CardBody className="bg-retro-black p-3 sm:p-4 md:p-5">
                 <CardItem
                   translateZ="30"
-                  className="font-retro text-m sm:text-base"
+                  className="font-display text-m sm:text-base"
                 >
                   <span className="hidden sm:block">{item.title}</span>
                   <CardItem translateZ="100" className="mt-2 sm:mt-3">

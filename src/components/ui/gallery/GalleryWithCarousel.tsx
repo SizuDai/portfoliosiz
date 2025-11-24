@@ -13,7 +13,7 @@ export function GalleryWithCarousel() {
       <div className="mb-2">
         <GamingText text="VFX" size="text-3xl" />
       </div>
-      <p className="mt-5 text-left text-yellow-100 font-hind font-semibold text-base">
+      <p className="mt-5 text-left text-yellow-100 font-sans font-semibold text-base">
         There are several benefits to using VFX in advertising: <br />{" "}
         Creativity: VFX allows advertisers to push the boundaries of what's
         possible, creating visually stunning and memorable ads that capture the

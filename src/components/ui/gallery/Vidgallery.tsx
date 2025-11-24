@@ -50,7 +50,7 @@ export function Vidgallery() {
         <GamingText text="Motion Graphics" size="text-3xl" />
       </div>
       <motion.p
-        className="mt-5 text-left text-yellow-1000 font-hind font-semibold text-base"
+        className="mt-5 text-left text-yellow-1000 font-sans font-semibold text-base"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}

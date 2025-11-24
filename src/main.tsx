@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import App2 from "../App2";
 import "./index.css";
 
 // Disable console logs in production
@@ -13,6 +13,6 @@ if (process.env.NODE_ENV === "production") {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <App2 />
   </React.StrictMode>
 );

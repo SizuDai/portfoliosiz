@@ -1,19 +1,33 @@
-import { defineConfig } from 'vite';
-import dotenv from 'dotenv';
-import react from '@vitejs/plugin-react';
 import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  resolve: {
-    alias: {
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
-    },
-  },
-  plugins: [react()],
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  },
-  build: {
-  },
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, '.', '');
+    return {
+      server: {
+        port: 3000,
+        host: '0.0.0.0',
+        hmr: {
+          protocol: 'ws',
+          host: 'localhost',
+        },
+        // Disable CSP headers that might conflict
+        headers: {},
+      },
+      build: {
+        // Disable minification in dev to avoid eval issues
+        minify: mode === 'production' ? 'esbuild' : false,
+      },
+      plugins: [react()],
+      define: {
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+      },
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, '.'),
+        }
+      }
+    };
 });

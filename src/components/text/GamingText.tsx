@@ -7,7 +7,7 @@ interface GamingTextProps {
 
 const GamingText: React.FC<GamingTextProps> = ({ text, size = "text-2xl" }) => {
   return (
-    <div className={`relative inline-block font-bold font-retro ${size}`}>
+    <div className={`relative inline-block font-bold font-display ${size}`}>
       <span
         className="relative text-yellow-300"
         style={{
