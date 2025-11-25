@@ -4,9 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CSN6DBQ8V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8CSN6DBQ8V');
+  </script>
+
   <!-- Allow unsafe-eval for Vite HMR and Tailwind JIT in development -->
   <meta http-equiv="Content-Security-Policy"
-    content="script-src 'self' 'unsafe-eval' 'unsafe-inline' http://localhost:* ws://localhost:* blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:*; img-src 'self' data: https: blob:;" />
+    content="script-src 'self' 'unsafe-eval' 'unsafe-inline' http://localhost:* ws://localhost:* https://www.googletagmanager.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:* https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https: blob:;" />
   <meta name="description"
     content="I'm Sizan Smith, a motion graphics designer, video editor, and VFX artist with a passion for crafting visually stunning and high-impact animations." />
   <meta name="keywords"
