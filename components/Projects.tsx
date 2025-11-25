@@ -19,6 +19,13 @@ const projects: Project[] = [
     year: "2025",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
   },
+  {
+    id: 3,
+    title: "Vibes Match",
+    category: "Web Application",
+    year: "2025",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+  },
 ];
 
 const ProjectCard: React.FC<{ project: Project; index: number; onClick: () => void }> = ({ project, index, onClick }) => {
@@ -121,6 +128,8 @@ const Projects: React.FC = () => {
       setShowExpressions(true);
     } else if (project.id === 2) {
       window.open("https://sheetsync.sizansmith.com.np/", "_blank");
+    } else if (project.id === 3) {
+      window.open("https://vibes-match-tau.vercel.app/", "_blank");
     }
   };
 
