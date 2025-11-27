@@ -3,6 +3,9 @@ import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 import ExpressionsOverlay from './ExpressionsOverlay';
+import thumbnaillg1 from '../src/assets/thumbnail3.png';
+import thumbnaillg2 from '../src/assets/thumbnail1.png';
+import thumbnaillg3 from '../src/assets/thumbnail2.png';
 
 const projects: Project[] = [
   {
@@ -10,21 +13,21 @@ const projects: Project[] = [
     title: "Top After Effects Essential Expressions",
     category: "After Effects Tools & Scripts",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1501780392773-287d506245a5?q=80&w=2070&auto=format&fit=crop"
+    image: thumbnaillg1
   },
   {
     id: 2,
     title: "SheetSync: Product Manager App",
     category: "Inventory & Data Automation",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+    image: thumbnaillg2
   },
   {
     id: 3,
     title: "Vibes Match",
     category: "Web Application",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+    image: thumbnaillg3
   },
 ];
 
