@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
-import ExpressionsOverlay from './ExpressionsOverlay';
 import thumbnaillg1 from '../src/assets/thumbnail3.png';
 import thumbnaillg2 from '../src/assets/thumbnail1.png';
 import thumbnaillg3 from '../src/assets/thumbnail2.png';
@@ -10,24 +10,27 @@ import thumbnaillg3 from '../src/assets/thumbnail2.png';
 const projects: Project[] = [
   {
     id: 1,
-    title: "Top After Effects Essential Expressions",
-    category: "After Effects Tools & Scripts",
-    year: "2025",
-    image: thumbnaillg1
+    title: "Mastering loopOut()",
+    category: "After Effects Tutorial",
+    year: "2024",
+    image: thumbnaillg1,
+    slug: "after-effects-loop-expression"
   },
   {
     id: 2,
-    title: "SheetSync: Product Manager App",
-    category: "Inventory & Data Automation",
-    year: "2025",
-    image: thumbnaillg2
+    title: "Project Leyla: AI Influencer",
+    category: "AI Case Study",
+    year: "2024",
+    image: thumbnaillg2,
+    slug: "leyla-ai-influencer-case-study"
   },
   {
     id: 3,
-    title: "Vibes Match",
-    category: "Web Application",
-    year: "2025",
-    image: thumbnaillg3
+    title: "Typography in Motion",
+    category: "Design Guide",
+    year: "2024",
+    image: thumbnaillg3,
+    slug: "typography-in-motion-guide"
   },
 ];
 
@@ -124,15 +127,12 @@ const ProjectCard: React.FC<{ project: Project; index: number; onClick: () => vo
 };
 
 const Projects: React.FC = () => {
-  const [showExpressions, setShowExpressions] = useState(false);
+  const navigate = useNavigate();
 
   const handleProjectClick = (project: Project) => {
-    if (project.id === 1) {
-      setShowExpressions(true);
-    } else if (project.id === 2) {
-      window.open("https://sheetsync.sizansmith.com.np/", "_blank");
-    } else if (project.id === 3) {
-      window.open("https://vibes-match-tau.vercel.app/", "_blank");
+    if (project.slug) {
+      navigate(`/blog/${project.slug}`);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -172,11 +172,7 @@ const Projects: React.FC = () => {
         </div>
       </footer>
 
-      <AnimatePresence>
-        {showExpressions && (
-          <ExpressionsOverlay onClose={() => setShowExpressions(false)} />
-        )}
-      </AnimatePresence>
+
     </section>
   );
 };
