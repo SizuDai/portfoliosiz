@@ -10,6 +10,7 @@ import BlogIndex from "./components/Blog/BlogIndex";
 import BlogPost from "./components/Blog/BlogPost";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
+import Footer from "./components/Footer";
 
 const App2: React.FC = () => {
   return (
@@ -44,6 +45,7 @@ const App2: React.FC = () => {
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 };
