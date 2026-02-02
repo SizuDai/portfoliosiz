@@ -1,7 +1,9 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomCursor";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const App2: React.FC = () => {
   return (
@@ -10,8 +12,18 @@ const App2: React.FC = () => {
       <CustomCursor />
 
       <main className="flex flex-col relative z-20">
-        <Hero />
-        <Projects />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Projects />
+              </>
+            }
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
       </main>
     </div>
   );
