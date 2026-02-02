@@ -28,6 +28,9 @@ const PrivacyPolicy: React.FC = () => {
                     Google AdSense & DoubleClick Cookie
                 </h2>
                 <p>
+                    This website uses cookies to personalize content and ads. We share information about your use of our site with our advertising and analytics partners who may combine it with other information that you’ve provided to them. Specifically, Google uses cookies to serve ads based on your prior visits to this website.
+                </p>
+                <p>
                     Google, as a third-party vendor, uses cookies to serve ads on our
                     Service. Google's use of the DART cookie enables it to serve ads to
                     our users based on their visit to our site and other sites on the
