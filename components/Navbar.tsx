@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,14 +9,14 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const menuVariants: Variants = {
-    closed: { 
+    closed: {
       opacity: 0,
       scale: 0.95,
       y: -20,
       transition: { duration: 0.2 }
     },
-    open: { 
-      opacity: 1, 
+    open: {
+      opacity: 1,
       scale: 1,
       y: 0,
       transition: { duration: 0.3, ease: "easeOut" }
@@ -26,7 +27,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Navbar Container */}
       <div className="fixed top-0 left-0 w-full flex justify-center pointer-events-none pt-6 px-4 h-auto" style={{ zIndex: 9999 }}>
-        <motion.nav 
+        <motion.nav
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -37,11 +38,11 @@ const Navbar: React.FC = () => {
               S
             </div>
             <div className="flex flex-col leading-none">
-               <span className="font-bold tracking-tight text-white text-base uppercase font-syne group-hover:text-brand transition-colors">Sizan Smith</span>
-               <span className="text-zinc-400 tracking-widest uppercase" style={{ fontSize: '9px', letterSpacing: '0.2em' }}>Portfolio</span>
+              <span className="font-bold tracking-tight text-white text-base uppercase font-syne group-hover:text-brand transition-colors">Sizan Smith</span>
+              <span className="text-zinc-400 tracking-widest uppercase" style={{ fontSize: '9px', letterSpacing: '0.2em' }}>Portfolio</span>
             </div>
           </a>
-          
+
           {/* Desktop Links */}
           <div className="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-zinc-400 items-center">
             <a href="#work" className="hover:text-white transition-all duration-300 relative group py-2 cursor-pointer">
@@ -58,7 +59,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             onClick={toggleMenu}
             className="md:hidden text-white hover:text-brand transition-colors relative z-50 p-2 -mr-2 cursor-pointer"
             aria-label="Toggle Menu"
@@ -73,47 +74,47 @@ const Navbar: React.FC = () => {
         {isMobileMenuOpen && (
           <>
             {/* Backdrop */}
-            <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md md:hidden"
-                style={{ zIndex: 9990 }}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md md:hidden"
+              style={{ zIndex: 9990 }}
             />
-            
+
             {/* Menu */}
             <motion.div
-                initial="closed"
-                animate="open"
-                exit="closed"
-                variants={menuVariants}
-                className="fixed top-24 left-4 right-4 bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-2xl md:hidden overflow-hidden"
-                style={{ zIndex: 9995 }}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
+              className="fixed top-24 left-4 right-4 bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-2xl md:hidden overflow-hidden"
+              style={{ zIndex: 9995 }}
             >
-                <div className="flex flex-col gap-8 text-center">
-                <a 
-                    href="#work" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-bold uppercase tracking-widest text-zinc-300 hover:text-brand transition-colors cursor-pointer"
+              <div className="flex flex-col gap-8 text-center">
+                <a
+                  href="#work"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-bold uppercase tracking-widest text-zinc-300 hover:text-brand transition-colors cursor-pointer"
                 >
-                    Playground
+                  Playground
                 </a>
-                <a 
-                    href="#about" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-bold uppercase tracking-widest text-zinc-300 hover:text-brand transition-colors cursor-pointer"
+                <a
+                  href="#about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-bold uppercase tracking-widest text-zinc-300 hover:text-brand transition-colors cursor-pointer"
                 >
-                    About
+                  About
                 </a>
-                <a 
-                    href="#contact" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-bold uppercase tracking-widest text-black bg-brand py-4 rounded-xl cursor-pointer shadow-brand"
+                <a
+                  href="#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-bold uppercase tracking-widest text-black bg-brand py-4 rounded-xl cursor-pointer shadow-brand"
                 >
-                    Contact
+                  Contact
                 </a>
-                </div>
+              </div>
             </motion.div>
           </>
         )}

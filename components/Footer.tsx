@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Github, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -58,8 +59,8 @@ const Footer: React.FC = () => {
             <span className="text-zinc-300 text-sm font-bold">© 2024 Sizan Smith Lamichhane</span>
             <span className="text-zinc-600 text-xs uppercase tracking-widest">Motion & Design Portfolio</span>
             <div className="flex gap-4 mt-2">
-              <a href="/privacy-policy" className="text-zinc-500 text-xs hover:text-brand transition-colors">Privacy Policy</a>
-              <a href="/terms-of-service" className="text-zinc-500 text-xs hover:text-brand transition-colors">Terms of Service</a>
+              <Link to="/privacy-policy" className="text-zinc-500 text-xs hover:text-brand transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-zinc-500 text-xs hover:text-brand transition-colors">Terms of Service</Link>
             </div>
           </div>
 
