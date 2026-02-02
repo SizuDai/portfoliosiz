@@ -1,8 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy: React.FC = () => {
     return (
         <section className="container mx-auto px-6 py-20 text-zinc-300 font-syne">
+            <Helmet>
+                <title>Privacy Policy | Sizzler Fx</title>
+                <meta name="description" content="Privacy Policy for Sizan Smith Lamichhane (Sizzler Fx). Learn how we collect, use, and protect your data." />
+                <link rel="canonical" href="https://sizan-lamichhane.vercel.app/privacy-policy" />
+            </Helmet>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Privacy Policy
             </h1>

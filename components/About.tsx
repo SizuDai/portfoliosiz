@@ -32,17 +32,27 @@ const About: React.FC = () => {
           className="flex flex-col md:flex-row gap-12 mb-32"
         >
           <div className="w-full md:w-1/4">
-             <h2 className="text-brand text-xs font-bold uppercase tracking-widest sticky top-32">About Me</h2>
+            <h2 className="text-brand text-xs font-bold uppercase tracking-widest sticky top-32">About Me</h2>
           </div>
-          
           <div className="w-full md:w-3/4">
             <h3 className="text-3xl md:text-5xl font-semibold mb-12 font-syne" style={{ lineHeight: 1.1 }}>
-              A willing and creative learner of all things, having great experience in the field of Editing and Designing.
+              A willing and creative learner of all things, blending Art with Artificial Intelligence.
             </h3>
-            
+
             <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
               <p>
-                I am a guy expressing my world full of amazing things and adventure in the form of design and videos. More importantly, I am open to all new experiences and great at translating learning into real-life experience.
+                I am a Motion Designer who doesn't just push pixels—I push boundaries. My work operates at the intersection of traditional <strong>Motion Graphics</strong> and cutting-edge <strong>AI Agentic Workflows</strong>.
+              </p>
+
+              <div className="border-l-4 border-brand pl-6 my-8">
+                <h4 className="text-white font-bold mb-2">My Philosophy</h4>
+                <p className="text-zinc-300 text-base">
+                  "The future isn't about choosing between human creativity and AI efficiency; it's about fusing them."
+                </p>
+              </div>
+
+              <p>
+                I leverage tools like <strong>ComfyUI</strong> and custom <strong>LLM Agents</strong> to automate the tedious parts of the creative process (like rotoscoping, asset generation, and script writing), allowing me to focus purely on the storytelling and visual impact. This "Hybrid-Creative" approach allows me to deliver high-quality animations faster and more efficiently than traditional studios.
               </p>
             </div>
           </div>
@@ -55,8 +65,8 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row gap-12 mb-24 border-t border-zinc-900 pt-16"
         >
-           <div className="w-full md:w-1/4">
-             <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest sticky top-32">Experience</h2>
+          <div className="w-full md:w-1/4">
+            <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest sticky top-32">Experience</h2>
           </div>
           <div className="w-full md:w-3/4 space-y-12">
             {experience.map((job, i) => (
@@ -66,8 +76,8 @@ const About: React.FC = () => {
                   <span className="text-zinc-500 text-sm">{job.role}</span>
                 </div>
                 <div className="text-right flex flex-col md:items-end">
-                   <span className="text-white font-mono text-sm">{job.year}</span>
-                   <span className="text-zinc-600 text-xs uppercase tracking-wider">{job.location}</span>
+                  <span className="text-white font-mono text-sm">{job.year}</span>
+                  <span className="text-zinc-600 text-xs uppercase tracking-wider">{job.location}</span>
                 </div>
               </div>
             ))}
@@ -81,8 +91,8 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row gap-12 mb-24 border-t border-zinc-900 pt-16"
         >
-           <div className="w-full md:w-1/4">
-             <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest sticky top-32">Education</h2>
+          <div className="w-full md:w-1/4">
+            <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest sticky top-32">Education</h2>
           </div>
           <div className="w-full md:w-3/4 space-y-12">
             {education.map((edu, i) => (
@@ -92,8 +102,8 @@ const About: React.FC = () => {
                   <span className="text-zinc-500 text-sm">{edu.degree}</span>
                 </div>
                 <div className="text-right flex flex-col md:items-end">
-                   <span className="text-white font-mono text-sm">{edu.year}</span>
-                   <span className="text-zinc-600 text-xs uppercase tracking-wider">{edu.location}</span>
+                  <span className="text-white font-mono text-sm">{edu.year}</span>
+                  <span className="text-zinc-600 text-xs uppercase tracking-wider">{edu.location}</span>
                 </div>
               </div>
             ))}
@@ -102,41 +112,41 @@ const About: React.FC = () => {
 
         {/* Skills & Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 border-t border-zinc-900 pt-16">
-           {/* Services */}
-           <motion.div
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             viewport={{ once: true }}
-           >
-              <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-12">Services</h2>
-              <ul className="grid grid-cols-1 gap-4">
-                {services.map((service, i) => (
-                  <li key={i} className="text-xl md:text-2xl text-zinc-300 border-b border-zinc-900 pb-4">
-                    {service}
-                  </li>
-                ))}
-              </ul>
-           </motion.div>
+          {/* Services */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-12">Services</h2>
+            <ul className="grid grid-cols-1 gap-4">
+              {services.map((service, i) => (
+                <li key={i} className="text-xl md:text-2xl text-zinc-300 border-b border-zinc-900 pb-4">
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
-           {/* Skills */}
-           <motion.div
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             viewport={{ once: true }}
-           >
-              <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-12">Software Skills</h2>
-              <div className="grid grid-cols-1 gap-4">
-                {skills.map((skill, i) => (
-                  <div key={i} className="text-zinc-400 hover:text-white transition-colors text-lg border-b border-zinc-900 pb-4">
-                    {skill}
-                  </div>
-                ))}
-              </div>
-           </motion.div>
+          {/* Skills */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-12">Software Skills</h2>
+            <div className="grid grid-cols-1 gap-4">
+              {skills.map((skill, i) => (
+                <div key={i} className="text-zinc-400 hover:text-white transition-colors text-lg border-b border-zinc-900 pb-4">
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 
