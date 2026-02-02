@@ -6,6 +6,10 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
+import BlogIndex from "./components/Blog/BlogIndex";
+import BlogPost from "./components/Blog/BlogPost";
+import AboutPage from "./components/AboutPage";
+import ContactPage from "./components/ContactPage";
 
 const App2: React.FC = () => {
   return (
@@ -32,6 +36,10 @@ const App2: React.FC = () => {
               </>
             }
           />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
