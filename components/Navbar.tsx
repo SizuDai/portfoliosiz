@@ -50,7 +50,6 @@ const Navbar: React.FC = () => {
 
         <div className="hidden md:flex items-center space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
           <Link to="/" className={`${isActive('/') ? 'text-primary' : 'hover:text-primary'} transition-colors`}>Works</Link>
-          <Link to="/journal" className={`${isActive('/journal') ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'} transition-colors`}>Journal</Link>
           <Link to="/contact" className={`${isActive('/contact') ? 'text-primary' : 'hover:text-primary'} transition-colors`}>Contact</Link>
         </div>
 
