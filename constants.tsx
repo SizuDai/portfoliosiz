@@ -46,7 +46,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Sizan Smith Lamichhane',
       role: 'Principal Motion Designer',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLi0Edv-JxREvnqNZ2bySexDmMmXBqqYuQ1f8S6Wv8ebqzdixVLiuQ1jy_hM5DPg1F5aigLJYMRu3YMuu9IGmfJVEdwZ_CBgPfWc5IGG0_B-kaBrPGlnmuzavHlIlLLFygRPnGkWivB9Z87VuWnceLCOVq6rdFuoQqVrQPru3FTwINbYfLTdW1uM6i9Z5g-kHk5hezpFbo3EvobeD8IjiMuVHiYyKTUQUkZR6wfei4ilhyo_VDmIDC_uNFEVsbI7vZ6LJqv_zPCS6W'
+      avatar: '/images/sizan_profile.jpg'
     },
     content: BLOG_CONTENT['volume-1-imperfection']
   },
