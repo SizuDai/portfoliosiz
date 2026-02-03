@@ -1,13 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Navbar from "./components/Navbar";
 import CustomCursor from "./components/CustomCursor";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
-import BlogIndex from "./components/Blog/BlogIndex";
-import BlogPost from "./components/Blog/BlogPost";
+import UpdatesIndex from "./components/Updates/UpdatesIndex";
+import UpdatePost from "./components/Updates/UpdatePost";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
@@ -19,12 +20,13 @@ const App2: React.FC = () => {
         <title>Sizan Smith Lamichhane | Motion Graphics Designer & VFX Artist</title>
         <meta
           name="description"
-          content="Portfolio of Sizan Smith Lamichhane (Sizzler Fx). Expert Motion Graphics Designer utilizing AI Agentic Workflows to create stunning visuals."
+          content="Portfolio of Sizan Smith Lamichhane (Sizzler Fx). Expert Motion Graphics Designer utilizing advanced workflows to create stunning visuals."
         />
-        <meta name="keywords" content="Motion Graphics, VFX, AI Agents, ComfyUI, After Effects, Sizzler Fx, Nepal" />
+        <meta name="keywords" content="Motion Graphics, VFX, After Effects, Sizzler Fx, Nepal, Design" />
       </Helmet>
       <div className="grain"></div>
       <CustomCursor />
+      <Navbar />
 
       <main className="flex flex-col relative z-20">
         <Routes>
@@ -39,8 +41,8 @@ const App2: React.FC = () => {
           />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/updates" element={<UpdatesIndex />} />
+          <Route path="/updates/:slug" element={<UpdatePost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>

@@ -8,6 +8,16 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        hmr: {
+          protocol: 'ws',
+          host: 'localhost',
+        },
+        // Disable CSP headers that might conflict
+        headers: {},
+      },
+      build: {
+        // Disable minification in dev to avoid eval issues
+        minify: mode === 'production' ? 'esbuild' : false,
       },
       plugins: [react()],
       define: {

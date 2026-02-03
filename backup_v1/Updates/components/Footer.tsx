@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <h2 className="font-display text-6xl md:text-9xl font-extrabold uppercase tracking-tighter mb-16 dark:text-white">
             LET'S TALK
           </h2>
-          <div className="flex justify-center text-left pt-16 border-t border-slate-200 dark:border-slate-800">
+          <div className="grid md:grid-cols-3 gap-12 text-left pt-16 border-t border-slate-200 dark:border-slate-800">
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-primary">
                 <span className="material-symbols-outlined">email</span>
@@ -21,7 +21,20 @@ const Footer: React.FC = () => {
               </div>
               <p className="font-bold text-lg dark:text-white">sizansmith.lamichhane@gmail.com</p>
             </div>
-
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-primary">
+                <span className="material-symbols-outlined">phone_iphone</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest">Phone</span>
+              </div>
+              <p className="font-bold text-lg dark:text-white">+977-9866039847</p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-primary">
+                <span className="material-symbols-outlined">location_on</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest">Location</span>
+              </div>
+              <p className="font-bold text-lg dark:text-white">Balaju, Tarkeshwar-08<br/>Kathmandu, Nepal</p>
+            </div>
           </div>
         </div>
       </section>

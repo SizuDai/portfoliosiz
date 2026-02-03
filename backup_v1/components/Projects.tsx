@@ -17,14 +17,6 @@ const projects: Project[] = [
     slug: "after-effects-loop-expression"
   },
   {
-    id: 2,
-    title: "Project Leyla: AI Influencer",
-    category: "AI Case Study",
-    year: "2024",
-    image: thumbnaillg2,
-    slug: "leyla-ai-influencer-case-study"
-  },
-  {
     id: 3,
     title: "Typography in Motion",
     category: "Design Guide",
@@ -131,7 +123,7 @@ const Projects: React.FC = () => {
 
   const handleProjectClick = (project: Project) => {
     if (project.slug) {
-      navigate(`/blog/${project.slug}`);
+      navigate(`/updates/${project.slug}`);
       window.scrollTo(0, 0);
     }
   };
@@ -149,7 +141,7 @@ const Projects: React.FC = () => {
             Other Projects
           </h2>
           <p className="text-zinc-400 max-w-lg text-lg leading-relaxed ml-2 mt-4">
-            Experimental lab, tools, and motion studies.
+            Technical breakdowns, tools, and motion studies.
           </p>
         </div>
       </motion.div>

@@ -41,7 +41,7 @@ const About: React.FC = () => {
 
             <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
               <p>
-                Sizan Smith Lamichhane is a Motion Graphics Designer and VFX Artist specializing in high-impact visual storytelling. With a handle known as Sizzler Fx, I bridge the gap between technical motion design (After Effects, Premiere Pro, DaVinci) and modern AI workflows like ComfyUI and Unreal Engine. My work ranges from major sports campaigns, like the Faf du Plessis signing for the Biratnagar Kings, to experimental AI influencer models like Leyla. This site serves as a lab for my scripts, expressions, and technical breakdowns.
+                Sizan Smith Lamichhane is a Motion Graphics Designer and VFX Artist specializing in high-impact visual storytelling. With a handle known as Sizzler Fx, I bridge the gap between technical motion design (After Effects, Premiere Pro, DaVinci) and modern creative workflows. My work ranges from major sports campaigns, like the Faf du Plessis signing for the Biratnagar Kings, to advanced motion studies. This site serves as a showcase for my scripts, expressions, and technical breakdowns.
               </p>
 
               <div className="border-l-4 border-brand pl-6 my-8">

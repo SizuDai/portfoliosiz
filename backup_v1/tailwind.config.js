@@ -15,24 +15,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'retro-yellow': '#FFFF00', // Bright yellow for text
-        'retro-black': '#000000', // Deep black for background
-      },
-      borderWidth: {
-        'pixel': '4px', // Custom border width to simulate pixel border
-      },
-      backgroundImage: {
-        'vignette': 'radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.5) 100%)'
-      },
-      // Extend boxShadow for glow effect
-      boxShadow: {
-        'glow': '0 0 8px rgba(255, 255, 255, 0.6)'
+        primary: '#EAB308', // Golden yellow from the brand
+        'background-light': '#FFFFFF',
+        'background-dark': '#0A0A0A',
+        brand: '#EAB308', // Updating brand to match primary for consistency
       },
       fontFamily: {
-        sans: ['"Inter"', 'sans-serif'],
-        display: ['"Syne"', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+        syne: ['Syne', 'sans-serif'], // Keeping as backup/legacy if needed elsewhere
+        body: ['Space Grotesk', 'sans-serif'],
       },
-      // your config here
+      borderRadius: {
+        DEFAULT: '0.5rem',
+        'xl': '1rem',
+      },
     },
   },
   variants: {

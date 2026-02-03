@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CSN6DBQ8V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8CSN6DBQ8V');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9334934182417259"
+    crossorigin="anonymous"></script>
+
+  <!-- Allow unsafe-eval for Vite HMR and Tailwind JIT in development -->
+  <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-eval' 'unsafe-inline' http://localhost:* ws://localhost:* https://www.googletagmanager.com https://pagead2.googlesyndication.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:* https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https: blob:;" />
+  <meta name="description"
+    content="I'm Sizan Smith, a motion graphics designer, video editor, and VFX artist with a passion for crafting visually stunning and high-impact animations." />
+  <meta name="keywords"
+    content="Motion Graphics, VFX, Video Editing, Character Animation, Sizan Smith Lamichhane, Portfolio, Designer, Creative" />
+  <meta name="author" content="Sizan Smith Lamichhane" />
+  <link rel="canonical" href="https://sizan-lamichhane.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sizan-lamichhane.vercel.app/" />
+  <meta property="og:title" content="Sizan Smith Lamichhane - Motion Graphics Designer" />
+  <meta property="og:description"
+    content="I'm Sizan Smith, a motion graphics designer, video editor, and VFX artist with a passion for crafting visually stunning and high-impact animations." />
+  <meta property="og:image" content="https://sizan-lamichhane.vercel.app/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://sizan-lamichhane.vercel.app/" />
+  <meta property="twitter:title" content="Sizan Smith Lamichhane - Motion Graphics Designer" />
+  <meta property="twitter:description"
+    content="I'm Sizan Smith, a motion graphics designer, video editor, and VFX artist with a passion for crafting visually stunning and high-impact animations." />
+  <meta property="twitter:image" content="https://sizan-lamichhane.vercel.app/og-image.jpg" />
+  <title>Sizan Smith Lamichhane - Motion Graphics Designer</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505' rx='20'/%3E%3Ctext x='50' y='75' font-family='Arial, sans-serif' font-weight='900' font-size='70' text-anchor='middle' fill='%23F2B71F'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --brand: #f2b71f;
+      --bg-dark: #050505;
+      --zinc-800: #27272a;
+      --zinc-900: #18181b;
+      --zinc-950: #09090b;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #f5f5f5;
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    #root {
+      display: block;
+      width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Syne", sans-serif;
+    }
+
+    .font-syne {
+      font-family: "Syne", sans-serif;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.03;
+      /* Simplified noise pattern to prevent parsing errors */
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+    }
+
+    /* Custom Utility Classes to replace JIT */
+    .bg-brand {
+      --tw-bg-opacity: 1;
+      background-color: rgba(242, 183, 31, var(--tw-bg-opacity));
+    }
+
+    .text-brand {
+      --tw-text-opacity: 1;
+      color: rgba(242, 183, 31, var(--tw-text-opacity));
+    }
+
+    .border-brand {
+      --tw-border-opacity: 1;
+      border-color: rgba(242, 183, 31, var(--tw-border-opacity));
+    }
+
+    .fill-brand {
+      fill: #f2b71f;
+    }
+
+    .bg-dark {
+      --tw-bg-opacity: 1;
+      background-color: rgba(5, 5, 5, var(--tw-bg-opacity));
+    }
+
+    .bg-zinc-900 {
+      --tw-bg-opacity: 1;
+      background-color: rgba(24, 24, 27, var(--tw-bg-opacity));
+    }
+
+    .bg-zinc-950 {
+      --tw-bg-opacity: 1;
+      background-color: rgba(9, 9, 11, var(--tw-bg-opacity));
+    }
+
+    .border-zinc-800 {
+      border-color: var(--zinc-800);
+    }
+
+    .border-zinc-900 {
+      border-color: var(--zinc-900);
+    }
+
+    /* Zinc Text Colors with Opacity Support */
+    .text-zinc-100 {
+      --tw-text-opacity: 1;
+      color: rgba(244, 244, 245, var(--tw-text-opacity));
+    }
+
+    .text-zinc-300 {
+      --tw-text-opacity: 1;
+      color: rgba(212, 212, 216, var(--tw-text-opacity));
+    }
+
+    .text-zinc-400 {
+      --tw-text-opacity: 1;
+      color: rgba(161, 161, 170, var(--tw-text-opacity));
+    }
+
+    .text-zinc-500 {
+      --tw-text-opacity: 1;
+      color: rgba(113, 113, 122, var(--tw-text-opacity));
+    }
+
+    .text-zinc-600 {
+      --tw-text-opacity: 1;
+      color: rgba(82, 82, 91, var(--tw-text-opacity));
+    }
+
+    .text-zinc-700 {
+      --tw-text-opacity: 1;
+      color: rgba(63, 63, 70, var(--tw-text-opacity));
+    }
+
+    .text-zinc-800 {
+      --tw-text-opacity: 1;
+      color: rgba(39, 39, 42, var(--tw-text-opacity));
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .backdrop-blur-xl {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .backdrop-blur-md {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
