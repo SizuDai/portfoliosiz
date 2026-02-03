@@ -1,4 +1,4 @@
-
+import React from 'react';
 export interface Project {
   id: string;
   title: string;
@@ -25,4 +25,5 @@ export interface BlogPost {
     role: string;
     avatar: string;
   };
+  content?: React.ReactNode;
 }

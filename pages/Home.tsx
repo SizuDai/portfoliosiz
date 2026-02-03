@@ -3,9 +3,12 @@ import React from 'react';
 import { BLOG_POSTS } from '../constants';
 import { Link } from 'react-router-dom';
 
+import SEO from '../components/SEO';
+
 const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
+      <SEO />
       {/* Hero Section */}
       <section className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center relative px-4 py-20">
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] pointer-events-none select-none flex items-center justify-center">

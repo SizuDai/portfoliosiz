@@ -31,60 +31,67 @@ export const PROJECTS: Project[] = [
   }
 ];
 
+import { BLOG_CONTENT } from './data/blog-content';
+
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: 'future-procedural',
-    title: 'The Future of Procedural Motion in UI Design',
-    excerpt: 'Deep dive into how algorithmic movement is replacing traditional keyframing in modern web interfaces, and what it means for user experience.',
-    date: 'March 24, 2024',
-    category: 'Featured',
-    readTime: '10 MIN READ',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCfNtmgBJi9_gqzY29C5LA92c6L7AXPhWeEilDfzefY8kaulvD_7tcmVhh9B_YJ0AeTVgCUStcOZw4rv1O7K4bRsZaplTvEdzNsRKLQCToMN-iUR7M6HeP-H8RfvHxqTvPCBPF2nV2xYoILZ01N9kRgb-ryRMtECRV5ASoyH3z-mFtYoYudMQZhRdujRhj3azdt_xyLLAjlIiQHzyzUFnNpmTqeNRh-ZAEKWiiCvGXJawXujundiEo-sat-Ub46ArPswNnWdtb7heMi',
+    id: 'volume-1-imperfection',
+    title: 'VOLUME I: THE ARCHITECTURE OF IMPERFECTION',
+    excerpt: 'The most significant visual trend of 2026 is the deliberate rejection of glossy, over-processed surfaces in favor of "Authenticity through Imperfection".',
+    date: 'February 3, 2026',
+    category: 'Design Trends',
+    readTime: '6 MIN READ',
+    image: '/images/blog/volume-1.png',
     featured: true,
     author: {
       name: 'Sizan Smith Lamichhane',
       role: 'Principal Motion Designer',
       avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLi0Edv-JxREvnqNZ2bySexDmMmXBqqYuQ1f8S6Wv8ebqzdixVLiuQ1jy_hM5DPg1F5aigLJYMRu3YMuu9IGmfJVEdwZ_CBgPfWc5IGG0_B-kaBrPGlnmuzavHlIlLLFygRPnGkWivB9Z87VuWnceLCOVq6rdFuoQqVrQPru3FTwINbYfLTdW1uM6i9Z5g-kHk5hezpFbo3EvobeD8IjiMuVHiYyKTUQUkZR6wfei4ilhyo_VDmIDC_uNFEVsbI7vZ6LJqv_zPCS6W'
-    }
+    },
+    content: BLOG_CONTENT['volume-1-imperfection']
   },
   {
-    id: 'loop-expressions',
-    title: 'Mastering loopOut() expressions in After Effects',
-    excerpt: 'A comprehensive guide for beginners on how to simplify your timeline using powerful loop expressions.',
-    date: 'February 10, 2024',
-    category: 'Design Guide',
+    id: 'volume-2-realtime',
+    title: 'VOLUME II: THE REAL-TIME REVOLUTION',
+    excerpt: 'The barrier between "creating" and "capturing" has collapsed as tools like Unreal Engine challenge the dominance of After Effects.',
+    date: 'February 3, 2026',
+    category: 'Technology',
     readTime: '5 MIN READ',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9np-6NSjHhh_epPV42gWaqdk0wxNsGsPe0ZeXoPbEaIIoapzEVVke7N4z1pAOfxbAPtXdgLiqN10lzNypOAHlBmLK2Be_UDAmDB7qh5nsLoRm_0QADkbVgfZydYy6UVq2v61ir7QjPY3cEgBtTrPamMkmi3TJazAOsO8goSINWlNOaKYPCM9Mx_Wv23tFzmjZFCFXh-HBNdkwuoieelD4IFMUNYR6MwuWqvrzwayl-TJ9yqjvHQISVrRjm5nSPxyGgg3t5zI7qAWt',
-    series: '2024 Series'
+    image: '/images/blog/volume-2.png',
+    featured: false,
+    content: BLOG_CONTENT['volume-2-realtime']
   },
   {
-    id: 'training-ai-influencer',
-    title: 'Project Leyla: Training an AI Influencer',
-    excerpt: 'Exploring the ethical and technical challenges of creating a consistent virtual persona using Stable Diffusion.',
-    date: 'January 15, 2024',
-    category: 'AI Case Study',
-    readTime: '8 MIN READ',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6FUEP-ILRFigZhhCXW1BJuuXeX5GPmPmJSARYB6RQS81Tip6u3mUWWxR7L_GqQ7h2oy-5Q3Oii_CG2iafQ2yPsl9dkBEbuhmUKgWNSzQZGAUCBIOTmBgl5y8Prqr_wXBTGwgst-HUvOh2wCosHpY6ezrMoCXNwZGFjqRONhFLIS73NhbpwW4762rSv4_ItnFtF7IX8DWeWbIMaD1lfNdlhCz_lZruTekSOAD7dnrPIyRKa8hCZHnlihFS_xelubjWu7JyOA6z2gsg',
-    series: 'Experimental Lab'
+    id: 'volume-3-ai-infrastructure',
+    title: 'VOLUME III: THE AI INFRASTRUCTURE',
+    excerpt: 'In 2026, artificial intelligence is no longer an external tool but the underlying infrastructure of the creative pipeline.',
+    date: 'February 3, 2026',
+    category: 'AI',
+    readTime: '7 MIN READ',
+    image: '/images/blog/volume-3.png',
+    featured: false,
+    content: BLOG_CONTENT['volume-3-ai-infrastructure']
   },
   {
-    id: 'kinetic-rulebook',
-    title: 'Typography in Motion: The Kinetic Rulebook',
-    excerpt: "Why legibility shouldn't be sacrificed for style, and how to balance both in high-energy sequences.",
-    date: 'December 05, 2023',
-    category: 'Motion Studies',
-    readTime: '12 MIN READ',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBczM5A9nrglUNTRMhPUcrQrQ67p76QRKzBeSKy_n5Do8ubMIkqhX3tUivHeBWZTAsMhU12Xx_6FQwsBV91OeWSw357g5NoCnNIvbcLOxucFVASbmVrPrY23wgHn6M9oMWopruttTrfJ1tWcfyV1vFVcgMmqj1LU9oyY3H0spycIegYMKRjlad7JZ9GdCqYFHledtZZeUADMsqB8ROnPMZY_d_pBnKjsWWwEsYh2HVtIXfrhyyxAoi3v9xrXS1a_0ZS5ks7GwlLEIC3',
-    series: 'Theory'
-  },
-  {
-    id: 'dark-mode-guide',
-    title: 'Get Your Perfect Color: A Dark Mode Guide',
-    excerpt: 'How to choose accent colors that pop without causing eye fatigue for your users on OLED displays.',
-    date: 'November 20, 2023',
-    category: 'Color Theory',
+    id: 'volume-4-ergonomics',
+    title: 'VOLUME IV: ERGONOMICS OF ATTENTION',
+    excerpt: 'As vertical video cements its status as the "Discovery King," the ergonomics of how users consume content have reshaped editing priorities.',
+    date: 'February 3, 2026',
+    category: 'UX/UI',
     readTime: '4 MIN READ',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQ6xjs63Ah0r6368KYO_Dl434E4NCPc0faSJW2pO5j2lWlONFQARmyWzAd2VSCsYfgIPEvSrUJoilsK-7icgIl029j2dyMZQlM_r_iMNWtyuxrD3CJ7s9FrS8VD6F0YFXyU7t0bugF3NLBUyVpb7BUbW1ZzGrTWu9UwY1fXzXAXJym2tXR-9nbm0jrFYT7ja2As7NBkeP4kL1GdFjJciMaNGR546LqiD2WcNZgvYFrjNONg6xTY1PGXfGDVRHncOuS2LQmtbyB-ugH',
-    series: 'Practical Tips'
+    image: '/images/blog/volume-4.png',
+    featured: false,
+    content: BLOG_CONTENT['volume-4-ergonomics']
+  },
+  {
+    id: 'volume-5-director',
+    title: 'VOLUME V: THE POST-PRODUCTION DIRECTOR',
+    excerpt: 'The role of the creative professional is shifting from execution to orchestration as technical barriers vanish.',
+    date: 'February 3, 2026',
+    category: 'Career',
+    readTime: '5 MIN READ',
+    image: '/images/blog/volume-5.png',
+    featured: false,
+    content: BLOG_CONTENT['volume-5-director']
   }
 ];
