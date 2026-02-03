@@ -7,22 +7,6 @@ const Journal: React.FC = () => {
   const featured = BLOG_POSTS.find(post => post.featured);
   const others = BLOG_POSTS.filter(post => !post.featured);
 
-  if (BLOG_POSTS.length === 0) {
-    return (
-      <div className="max-w-7xl mx-auto px-6 py-32 text-center min-h-[60vh] flex flex-col items-center justify-center">
-        <h1 className="font-display text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-6 dark:text-white">
-          Insights <span className="text-primary">&</span> Ideas
-        </h1>
-        <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl font-light mb-8">
-          The journal is currently being curated. Check back soon for deep dives into motion design and technology.
-        </p>
-        <Link to="/" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:gap-4 transition-all">
-          <span className="material-symbols-outlined">west</span> Return Home
-        </Link>
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <header className="mb-20">
@@ -39,9 +23,9 @@ const Journal: React.FC = () => {
         <section className="mb-24">
           <Link to={`/journal/${featured.id}`} className="group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row h-auto lg:h-[500px]">
             <div className="lg:w-3/5 relative overflow-hidden">
-              <img
-                alt={featured.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              <img 
+                alt={featured.title} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 src={featured.image}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:hidden"></div>
@@ -73,9 +57,9 @@ const Journal: React.FC = () => {
           <article key={post.id} className="group flex flex-col">
             <Link to={`/journal/${post.id}`} className="block">
               <div className="aspect-video mb-6 overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                <img
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                <img 
+                  alt={post.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   src={post.image}
                 />
               </div>
@@ -112,6 +96,5 @@ const Journal: React.FC = () => {
     </div>
   );
 };
-
 
 export default Journal;
