@@ -23,9 +23,9 @@ const Journal: React.FC = () => {
         <section className="mb-24">
           <Link to={`/journal/${featured.id}`} className="group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row h-auto lg:h-[500px]">
             <div className="lg:w-3/5 relative overflow-hidden">
-              <img 
-                alt={featured.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                alt={featured.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 src={featured.image}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:hidden"></div>
@@ -57,9 +57,9 @@ const Journal: React.FC = () => {
           <article key={post.id} className="group flex flex-col">
             <Link to={`/journal/${post.id}`} className="block">
               <div className="aspect-video mb-6 overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                <img 
-                  alt={post.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                <img
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   src={post.image}
                 />
               </div>
@@ -84,6 +84,7 @@ const Journal: React.FC = () => {
       </div>
 
       {/* Pagination */}
+      {/* Pagination - Hidden until more posts are added and pagination logic is implemented
       <div className="mt-20 flex justify-center items-center gap-4">
         <button className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors dark:text-white">
           <span className="material-symbols-outlined">chevron_left</span>
@@ -93,6 +94,7 @@ const Journal: React.FC = () => {
           <span className="material-symbols-outlined">chevron_right</span>
         </button>
       </div>
+      */}
     </div>
   );
 };

@@ -11,42 +11,30 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] pointer-events-none select-none flex items-center justify-center">
           <span className="font-display font-extrabold text-[40vw] leading-none uppercase translate-y-20 dark:text-white">MOTION</span>
         </div>
-        
+
         <div className="relative z-10 text-center flex flex-col items-center">
           <div className="relative mb-12">
             <h1 className="font-display font-extrabold text-7xl md:text-9xl lg:text-[12rem] hero-text uppercase dark:text-white text-slate-900 transition-all">SIZAN</h1>
             <h1 className="font-display font-extrabold text-7xl md:text-9xl lg:text-[12rem] hero-text uppercase text-primary -mt-4 md:-mt-8">SMITH</h1>
           </div>
-          
+
           <div className="bg-slate-900/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 px-6 py-2 rounded-full mb-8">
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-slate-500 dark:text-gray-400">Motion Graphics Designer</span>
           </div>
-          
+
           <a href="#projects" className="group relative inline-flex items-center bg-slate-900 dark:bg-white text-white dark:text-black px-10 py-5 font-bold uppercase text-sm tracking-widest transition-all hover:pr-14 hover:bg-primary hover:text-black">
             Enter Portfolio
             <span className="material-symbols-outlined ml-2 absolute right-6 opacity-0 group-hover:opacity-100 transition-all duration-300">north_east</span>
           </a>
         </div>
 
-        <div className="absolute bottom-12 right-12 z-40 hidden lg:block">
-          <div className="bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 p-4 rounded-xl shadow-2xl backdrop-blur-md max-w-[240px]">
-            <p className="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">New Blog Post</p>
-            <p className="text-xs font-bold leading-tight mb-3 dark:text-white">5 Tips for Better Motion Typography</p>
-            <div className="flex">
-              <input className="bg-slate-100 dark:bg-black/40 border-none text-[10px] w-full focus:ring-0 px-3 py-2 dark:text-white" placeholder="Email" type="text"/>
-              <button className="bg-slate-900 dark:bg-white text-white dark:text-black px-3 flex items-center">
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </button>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-white/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div>
-            <h2 className="font-display font-extrabold text-5xl md:text-7xl uppercase mb-4 dark:text-white">Other<br/>Projects</h2>
+            <h2 className="font-display font-extrabold text-5xl md:text-7xl uppercase mb-4 dark:text-white">Other<br />Projects</h2>
             <p className="text-slate-500 dark:text-gray-400 max-w-sm">Experimental lab, tools, and motion studies. Pushing the boundaries of visual storytelling.</p>
           </div>
           <div className="hidden md:block">
@@ -65,9 +53,9 @@ const Home: React.FC = () => {
           {PROJECTS.map((project) => (
             <div key={project.id} className="group cursor-pointer">
               <div className="relative overflow-hidden aspect-video bg-slate-200 dark:bg-surface-dark mb-6 rounded-xl">
-                <img 
-                  alt={project.title} 
-                  className="w-full h-full object-cover opacity-50 transition-slow group-hover:scale-105" 
+                <img
+                  alt={project.title}
+                  className="w-full h-full object-cover opacity-50 transition-slow group-hover:scale-105"
                   src={project.image}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
