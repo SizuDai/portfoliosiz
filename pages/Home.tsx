@@ -22,7 +22,7 @@ const Home: React.FC = () => {
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-slate-500 dark:text-gray-400">Motion Graphics Designer</span>
           </div>
 
-          <a href="#projects" className="group relative inline-flex items-center bg-slate-900 dark:bg-white text-white dark:text-black px-10 py-5 font-bold uppercase text-sm tracking-widest transition-all hover:pr-14 hover:bg-primary hover:text-black">
+          <a href="https://sizansmith.framer.website/" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center bg-slate-900 dark:bg-white text-white dark:text-black px-10 py-5 font-bold uppercase text-sm tracking-widest transition-all hover:pr-14 hover:bg-primary hover:text-black">
             Enter Portfolio
             <span className="material-symbols-outlined ml-2 absolute right-6 opacity-0 group-hover:opacity-100 transition-all duration-300">north_east</span>
           </a>
