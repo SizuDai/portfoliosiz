@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PROJECTS } from '../constants';
+import { BLOG_POSTS } from '../constants';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -34,8 +34,8 @@ const Home: React.FC = () => {
       <section id="projects" className="py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-white/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div>
-            <h2 className="font-display font-extrabold text-5xl md:text-7xl uppercase mb-4 dark:text-white">Other<br />Projects</h2>
-            <p className="text-slate-500 dark:text-gray-400 max-w-sm">Experimental lab, tools, and motion studies. Pushing the boundaries of visual storytelling.</p>
+            <h2 className="font-display font-extrabold text-5xl md:text-7xl uppercase mb-4 dark:text-white">Latest<br />Blogs</h2>
+            <p className="text-slate-500 dark:text-gray-400 max-w-sm">Thoughts, experiments, and insights on motion design and technology.</p>
           </div>
           <div className="hidden md:block">
             <div className="flex space-x-4">
@@ -50,37 +50,35 @@ const Home: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {PROJECTS.map((project) => (
-            <div key={project.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden aspect-video bg-slate-200 dark:bg-surface-dark mb-6 rounded-xl">
+          {BLOG_POSTS.map((post) => (
+            <Link to={`/journal/${post.id}`} key={post.id} className="group cursor-pointer block">
+              <div className="relative overflow-hidden aspect-video bg-slate-200 dark:bg-surface-dark mb-6 rounded-xl border border-slate-200 dark:border-white/10">
                 <img
-                  alt={project.title}
-                  className="w-full h-full object-cover opacity-50 transition-slow group-hover:scale-105"
-                  src={project.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src={post.image}
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8 border border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/40 backdrop-blur-sm rounded-lg">
-                    <span className="material-symbols-outlined text-4xl mb-2 text-primary">{project.icon}</span>
-                    <div className="font-mono text-[10px] text-slate-700 dark:text-gray-400 uppercase tracking-widest">{project.accentText}</div>
-                  </div>
+                <div className="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full border border-slate-200 dark:border-white/10">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{post.category}</span>
                 </div>
               </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-2xl font-bold mb-1 dark:text-white">{project.title}</h3>
-                  <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">{project.category}</p>
+              <div className="flex flex-col">
+                <h3 className="text-2xl font-display font-bold mb-2 dark:text-white group-hover:text-primary transition-colors leading-tight">{post.title}</h3>
+                <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                  <span>{post.date}</span>
+                  <span className="w-1 h-1 bg-slate-500 rounded-full"></span>
+                  <span>{post.readTime}</span>
                 </div>
-                <span className="text-[10px] font-bold border border-slate-200 dark:border-white/20 px-2 py-1 dark:text-gray-400 rounded">{project.year}</span>
               </div>
-            </div>
+            </Link>
           ))}
 
           <Link to="/journal" className="flex items-center justify-center border-2 border-dashed border-slate-200 dark:border-white/10 rounded-xl aspect-video p-12 group hover:border-primary transition-colors cursor-pointer">
             <div className="text-center">
-              <span className="material-symbols-outlined text-5xl mb-4 text-slate-400 group-hover:text-primary transition-colors">article</span>
-              <h4 className="font-display font-bold text-xl uppercase mb-2 dark:text-white">Read more on my blog</h4>
-              <p className="text-sm text-slate-500 mb-6">Thoughts on motion, tech, and design trends.</p>
-              <span className="text-xs font-bold uppercase tracking-widest text-primary border-b border-primary pb-1">Visit Journal</span>
+              <span className="material-symbols-outlined text-5xl mb-4 text-slate-400 group-hover:text-primary transition-colors">auto_stories</span>
+              <h4 className="font-display font-bold text-xl uppercase mb-2 dark:text-white">View all blogs</h4>
+              <p className="text-sm text-slate-500 mb-6">Explore the full archive.</p>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary border-b border-primary pb-1">Visit Archive</span>
             </div>
           </Link>
         </div>
