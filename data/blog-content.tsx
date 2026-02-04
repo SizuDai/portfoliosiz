@@ -288,5 +288,106 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
                 </p>
             </div>
         </>
+    ),
+    'formula-6-part-design': (
+        <>
+            <p className="lead text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                Have you ever spent an hour fighting with design software just to get a single social post right? Or maybe you've tried AI image generators only to get "random" results that look nothing like what you imagined.
+            </p>
+            <p className="lead text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed mt-4">
+                The problem usually isn't a lack of creativity—it's the "design brief." To get professional-grade results from AI, you have to stop treating it like a search engine and start treating it like a creative director.
+            </p>
+            <p className="lead text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed mt-4">
+                Here is a repeatable framework to turn AI into your personal professional designer, allowing you to create predictable, high-quality assets for your business.
+            </p>
+
+            <h2>The Master Framework: The 6-Part Prompt Formula</h2>
+            <p>
+                Most people fail because their prompts are too vague. Writing a prompt like "a coffee cup" gives the AI too much room to guess. Instead, use this specific order to "call the shot" and get exactly what you need:
+            </p>
+
+            <div className="my-8 overflow-x-auto">
+                <table className="w-full text-left bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden">
+                    <thead className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                        <tr>
+                            <th className="p-4">Element</th>
+                            <th className="p-4">Description</th>
+                            <th className="p-4">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody className="text-sm dark:text-slate-400">
+                        <tr className="border-b border-slate-200 dark:border-slate-800">
+                            <td className="p-4 font-bold text-teal-600">Subject</td>
+                            <td className="p-4">Be hyper-specific about materials and textures.</td>
+                            <td className="p-4">"A rose gold smartwatch with a brushed metal finish..."</td>
+                        </tr>
+                        <tr className="border-b border-slate-200 dark:border-slate-800">
+                            <td className="p-4 font-bold text-teal-600">Composition</td>
+                            <td className="p-4">Tell the camera where to stand.</td>
+                            <td className="p-4">"Low-angle hero shot" or "Flat lay from directly above"</td>
+                        </tr>
+                        <tr className="border-b border-slate-200 dark:border-slate-800">
+                            <td className="p-4 font-bold text-teal-600">Action</td>
+                            <td className="p-4">Add movement to make it alive.</td>
+                            <td className="p-4">"Steam rising from the mug" or "Water splashing"</td>
+                        </tr>
+                        <tr className="border-b border-slate-200 dark:border-slate-800">
+                            <td className="p-4 font-bold text-teal-600">Location</td>
+                            <td className="p-4">Set the scene intentionally.</td>
+                            <td className="p-4">"Marble countertop" vs "Weathered wooden table"</td>
+                        </tr>
+                        <tr className="border-b border-slate-200 dark:border-slate-800">
+                            <td className="p-4 font-bold text-teal-600">Style</td>
+                            <td className="p-4">Define the visual language.</td>
+                            <td className="p-4">"Cinematic film still", "Vintage 80s Polaroid"</td>
+                        </tr>
+                        <tr>
+                            <td className="p-4 font-bold text-teal-600">Editing</td>
+                            <td className="p-4">Refine specific changes.</td>
+                            <td className="p-4">"Make the lighting 20% warmer"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>3 Real-World Business Use Cases</h2>
+
+            <h3>1. Viral Social Graphics & Thumbnails</h3>
+            <p>
+                Stop paying for every minor social asset. To create a high-converting thumbnail, focus on a "face-filling" composition. Prompt for an expressive person on one side of the frame to leave about 60% of the space for bold text. For the text itself, specify a "white font with a thick black outline" to ensure it pops against any background.
+            </p>
+
+            <h3>2. High-End Product Photography</h3>
+            <p>
+                Whether you need Amazon-ready shots or lifestyle vibes, the environment is everything. For a "beauty" look, prompt for "natural sunlight streaming from the side" and "subtle water droplets" on the product. For a "lifestyle" look, place the product in a relatable setting, like a "sun-drenched home office," to help customers visualize owning it.
+            </p>
+
+            <h3>3. Business Infographics & Documents</h3>
+            <p>
+                Modern AI models are becoming incredibly proficient at rendering clean text and complex layouts. When creating infographics, describe the structure first. For example, ask for a "vertical timeline with five major milestones and circular markers." Use color theory to your advantage by prompting for specific tones (e.g., "cool blues for professional data") to convey the right mood.
+            </p>
+
+            <h2>The Secret Weapon: Conversational Editing</h2>
+            <p>
+                The biggest time-waster in AI design is re-typing an entire prompt because the lighting was slightly off. The most effective way to work is through Conversational Editing. Instead of starting over, build on your results:
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2 text-slate-600 dark:text-slate-400 my-6">
+                <li><strong>Step 1:</strong> "Keep everything the same, but make the lighting 20% warmer."</li>
+                <li><strong>Step 2:</strong> "Now add the text 'Coming Soon' in a bold serif font at the bottom."</li>
+                <li><strong>Step 3:</strong> "Keep the layout identical, but swap the background for a modern office setting."</li>
+            </ul>
+
+            <p>
+                By iterating this way, you treat the AI as a collaborator, refining the vision until it’s perfect.
+            </p>
+
+            <div className="my-8">
+                <h3 className="font-heading text-2xl font-bold mb-4 dark:text-white">Final Thoughts</h3>
+                <p>
+                    You don't need a design degree to create stunning visuals; you just need a better way to communicate. By using this 6-part formula, you can stop "gambling" on AI generations and start producing consistent, professional content that represents your brand.
+                </p>
+            </div>
+        </>
     )
 };

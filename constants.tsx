@@ -108,7 +108,19 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '8 MIN READ',
     image: '/images/blog/volume-6.png',
     views: 18432,
-    featured: true,
+    featured: false,
     content: BLOG_CONTENT['volume-6-context-engineering']
+  },
+  {
+    id: 'formula-6-part-design',
+    title: 'Stop Guessing, Start Designing: The 6-Part AI Prompt Formula',
+    excerpt: 'A repeatable framework to turn AI into your personal professional designer, allowing you to create predictable, high-quality assets.',
+    date: 'February 4, 2026',
+    category: 'AI Design',
+    readTime: '6 MIN READ',
+    image: '/images/blog/formula-6-part.png',
+    views: 5420,
+    featured: true,
+    content: BLOG_CONTENT['formula-6-part-design']
   }
 ];
