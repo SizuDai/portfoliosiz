@@ -306,6 +306,11 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
                 Most people fail because their prompts are too vague. Writing a prompt like "a coffee cup" gives the AI too much room to guess. Instead, use this specific order to "call the shot" and get exactly what you need:
             </p>
 
+            <div className="my-8">
+                <img src="/images/blog/formula-6-part-icons.png" alt="6-Part Formula Visualization" className="w-full rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800" />
+                <p className="text-sm text-center text-slate-500 mt-2 italic">The 6 pillars of a professional prompt.</p>
+            </div>
+
             <div className="my-8 overflow-x-auto">
                 <table className="w-full text-left bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden">
                     <thead className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
@@ -348,6 +353,11 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div className="my-8">
+                <img src="/images/blog/formula-6-part-comparison.png" alt="Bad vs Good Prompt Comparison" className="w-full rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800" />
+                <p className="text-sm text-center text-slate-500 mt-2 italic">The difference between a vague prompt and the 6-part framework.</p>
             </div>
 
             <h2>3 Real-World Business Use Cases</h2>

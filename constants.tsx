@@ -35,6 +35,18 @@ import { BLOG_CONTENT } from './data/blog-content';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: 'formula-6-part-design',
+    title: 'Stop Guessing, Start Designing: The 6-Part AI Prompt Formula',
+    excerpt: 'A repeatable framework to turn AI into your personal professional designer, allowing you to create predictable, high-quality assets.',
+    date: 'February 4, 2026',
+    category: 'AI Design',
+    readTime: '6 MIN READ',
+    image: '/images/blog/formula-6-part.png',
+    views: 5420,
+    featured: true,
+    content: BLOG_CONTENT['formula-6-part-design']
+  },
+  {
     id: 'volume-1-imperfection',
     title: 'The Imperfection Paradox: Why Flaws Are the New Luxury',
     excerpt: 'The most significant visual trend of 2026 is the deliberate rejection of glossy, over-processed surfaces in favor of "Authenticity through Imperfection".',
@@ -43,7 +55,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 MIN READ',
     image: '/images/blog/volume-1.png',
     views: 12543,
-    featured: true,
+    featured: false,
     author: {
       name: 'Sizan Smith Lamichhane',
       role: 'Principal Motion Designer',
@@ -110,17 +122,5 @@ export const BLOG_POSTS: BlogPost[] = [
     views: 18432,
     featured: false,
     content: BLOG_CONTENT['volume-6-context-engineering']
-  },
-  {
-    id: 'formula-6-part-design',
-    title: 'Stop Guessing, Start Designing: The 6-Part AI Prompt Formula',
-    excerpt: 'A repeatable framework to turn AI into your personal professional designer, allowing you to create predictable, high-quality assets.',
-    date: 'February 4, 2026',
-    category: 'AI Design',
-    readTime: '6 MIN READ',
-    image: '/images/blog/formula-6-part.png',
-    views: 5420,
-    featured: true,
-    content: BLOG_CONTENT['formula-6-part-design']
   }
 ];
