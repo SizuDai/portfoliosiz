@@ -28,6 +28,20 @@ const PostDetail: React.FC = () => {
     }]
   };
 
+  // Get related posts based on category, excluding current post
+  const relatedPosts = BLOG_POSTS
+    .filter(p => p.category === post.category && p.id !== post.id)
+    .slice(0, 2);
+
+  // If not enough related posts, fill with popular posts
+  if (relatedPosts.length < 2) {
+    const popularPosts = BLOG_POSTS
+      .filter(p => p.id !== post.id && !relatedPosts.find(rp => rp.id === p.id))
+      .sort((a, b) => (b.views || 0) - (a.views || 0))
+      .slice(0, 2 - relatedPosts.length);
+    relatedPosts.push(...popularPosts);
+  }
+
   return (
     <div className="bg-white dark:bg-background-dark transition-colors duration-300">
       <SEO
@@ -43,6 +57,12 @@ const PostDetail: React.FC = () => {
           <div className="flex items-center gap-4 mb-6">
             <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full">{post.category}</span>
             <span className="text-slate-400 text-xs font-medium uppercase tracking-widest">{post.date}</span>
+            {post.views && (
+              <span className="flex items-center gap-1 text-slate-400 text-xs font-medium uppercase tracking-widest">
+                <span className="material-symbols-outlined text-[14px]">visibility</span>
+                {(post.views).toLocaleString()}
+              </span>
+            )}
           </div>
           <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-8 dark:text-white">
             {post.title}
@@ -87,6 +107,32 @@ const PostDetail: React.FC = () => {
           <article className="prose prose-slate prose-lg dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-a:text-primary">
             {post.content}
           </article>
+
+          {/* Suggested Blogs */}
+          <section className="mt-24 pt-12 border-t border-slate-100 dark:border-slate-800">
+            <h3 className="font-display text-2xl font-bold mb-8 dark:text-white">Continue Reading</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {relatedPosts.map(suggested => (
+                <Link to={`/journal/${suggested.id}`} key={suggested.id} className="group block">
+                  <div className="aspect-video mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900">
+                    <img
+                      src={suggested.image}
+                      alt={suggested.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex items-center gap-2 mb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    <span className="text-primary">{suggested.category}</span>
+                    <span>•</span>
+                    <span>{suggested.date}</span>
+                  </div>
+                  <h4 className="font-heading text-xl font-bold group-hover:text-primary transition-colors dark:text-white leading-tight">
+                    {suggested.title}
+                  </h4>
+                </Link>
+              ))}
+            </div>
+          </section>
 
           <section className="mt-20 p-10 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 rounded-2xl">
             <div className="max-w-2xl">

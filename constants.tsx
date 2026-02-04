@@ -42,6 +42,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Design Trends',
     readTime: '6 MIN READ',
     image: '/images/blog/volume-1.png',
+    views: 12543,
     featured: true,
     author: {
       name: 'Sizan Smith Lamichhane',
@@ -58,6 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Technology',
     readTime: '5 MIN READ',
     image: '/images/blog/volume-2.png',
+    views: 8932,
     featured: false,
     content: BLOG_CONTENT['volume-2-realtime']
   },
@@ -69,6 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'AI',
     readTime: '7 MIN READ',
     image: '/images/blog/volume-3.png',
+    views: 15678,
     featured: false,
     content: BLOG_CONTENT['volume-3-ai-infrastructure']
   },
@@ -80,6 +83,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'UX/UI',
     readTime: '4 MIN READ',
     image: '/images/blog/volume-4.png',
+    views: 6543,
     featured: false,
     content: BLOG_CONTENT['volume-4-ergonomics']
   },
@@ -91,6 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Career',
     readTime: '5 MIN READ',
     image: '/images/blog/volume-5.png',
+    views: 9876,
     featured: false,
     content: BLOG_CONTENT['volume-5-director']
   },
@@ -102,6 +107,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'AI Strategy',
     readTime: '8 MIN READ',
     image: '/images/blog/volume-6.png',
+    views: 18432,
     featured: true,
     content: BLOG_CONTENT['volume-6-context-engineering']
   }
