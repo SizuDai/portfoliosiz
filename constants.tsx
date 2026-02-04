@@ -36,7 +36,7 @@ import { BLOG_CONTENT } from './data/blog-content';
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'volume-1-imperfection',
-    title: 'VOLUME I: THE ARCHITECTURE OF IMPERFECTION',
+    title: 'The Imperfection Paradox: Why Flaws Are the New Luxury',
     excerpt: 'The most significant visual trend of 2026 is the deliberate rejection of glossy, over-processed surfaces in favor of "Authenticity through Imperfection".',
     date: 'February 3, 2026',
     category: 'Design Trends',
@@ -52,7 +52,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'volume-2-realtime',
-    title: 'VOLUME II: THE REAL-TIME REVOLUTION',
+    title: 'The Real-Time Renaissance: Creating at the Speed of Thought',
     excerpt: 'The barrier between "creating" and "capturing" has collapsed as tools like Unreal Engine challenge the dominance of After Effects.',
     date: 'February 3, 2026',
     category: 'Technology',
@@ -63,7 +63,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'volume-3-ai-infrastructure',
-    title: 'VOLUME III: THE AI INFRASTRUCTURE',
+    title: 'The Synthetic Foundation: AI as Creative Infrastructure',
     excerpt: 'In 2026, artificial intelligence is no longer an external tool but the underlying infrastructure of the creative pipeline.',
     date: 'February 3, 2026',
     category: 'AI',
@@ -74,7 +74,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'volume-4-ergonomics',
-    title: 'VOLUME IV: ERGONOMICS OF ATTENTION',
+    title: 'The Ergonomics of Attention: Designing for the 9:16 World',
     excerpt: 'As vertical video cements its status as the "Discovery King," the ergonomics of how users consume content have reshaped editing priorities.',
     date: 'February 3, 2026',
     category: 'UX/UI',
@@ -85,7 +85,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'volume-5-director',
-    title: 'VOLUME V: THE POST-PRODUCTION DIRECTOR',
+    title: 'The Creative Conductor: Orchestrating AI Agents',
     excerpt: 'The role of the creative professional is shifting from execution to orchestration as technical barriers vanish.',
     date: 'February 3, 2026',
     category: 'Career',
@@ -93,5 +93,16 @@ export const BLOG_POSTS: BlogPost[] = [
     image: '/images/blog/volume-5.png',
     featured: false,
     content: BLOG_CONTENT['volume-5-director']
+  },
+  {
+    id: 'volume-6-context-engineering',
+    title: 'Context Engineering: The Orchestrator\'s Edge',
+    excerpt: 'To drive traffic and dominate Generative Engine Optimization (GEO), you need to stop writing prompts and start engineering environments.',
+    date: 'February 4, 2026',
+    category: 'AI Strategy',
+    readTime: '8 MIN READ',
+    image: '/images/blog/volume-6.png',
+    featured: true,
+    content: BLOG_CONTENT['volume-6-context-engineering']
   }
 ];
